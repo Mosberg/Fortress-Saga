@@ -12,17 +12,23 @@
         {
           "id": "thorn_blade",
           "name": "Thorn Blade Nebula",
-          "effects": "Increases flat and percentage Hero Attack (+15%/lvl)."
+          "effects": "Increases flat and percentage Hero Attack (+15%/lvl).",
+          "cost_per_level": 4,
+          "max_level": 10
         },
         {
           "id": "lyre",
           "name": "Lyre Nebula",
-          "effects": "+20% ATK per level for Supporter-class units."
+          "effects": "+20% ATK per level for Supporter-class units.",
+          "cost_per_level": 4,
+          "max_level": 10
         },
         {
           "id": "stepping_stone",
           "name": "Stepping Stone Nebula",
-          "effects": "Up to +80% ATK scaling for Onboard heroes."
+          "effects": "Up to +80% ATK scaling for Onboard heroes.",
+          "cost_per_level": 4,
+          "max_level": 10
         }
       ]
     },
@@ -33,12 +39,16 @@
         {
           "id": "gun_mount",
           "name": "Gun Mount Nebula",
-          "effects": "Escalates base Fortress Cannon damage (+25%/lvl)."
+          "effects": "Escalates base Fortress Cannon damage (+25%/lvl).",
+          "cost_per_level": 6,
+          "max_level": 10
         },
         {
           "id": "sharpshooter",
           "name": "Sharpshooter Nebula",
-          "effects": "Escalates Fortress Attack Speed directly (+5%/lvl)."
+          "effects": "Escalates Fortress Attack Speed directly (+5%/lvl).",
+          "cost_per_level": 6,
+          "max_level": 10
         },
         {
           "id": "platinum",
@@ -59,7 +69,9 @@
         {
           "id": "iron_gate",
           "name": "Iron Gate Nebula",
-          "effects": "Massive multipliers to Fortress Max HP (+75%/lvl, core of late-game HP build)."
+          "effects": "Massive multipliers to Fortress Max HP (+75%/lvl, core of late-game HP build).",
+          "cost_per_level": 15,
+          "max_level": 10
         },
         {
           "id": "starfire_ii",

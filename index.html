@@ -151,24 +151,14 @@
           <h2>Smelter Tiers & Red Affix Rules</h2>
           <table>
             <thead><tr><th>Tier</th><th>White Lines</th><th>Red Lines</th><th>Ideal Red Rolls</th></tr></thead>
-            <tbody>
-              <tr><td><span class="badge rare">Rare</span></td><td>1</td><td>1</td><td>Gold%, Exp%</td></tr>
-              <tr><td><span class="badge unique">Unique</span></td><td>1</td><td>1</td><td>ATK%, Skill Effect%</td></tr>
-              <tr><td><span class="badge epic">Epic</span></td><td>2</td><td>1</td><td>Skill Effect%, Crit DMG%</td></tr>
-              <tr><td><span class="badge legend">Legend</span></td><td>2</td><td>2</td><td>Dual SE%, Dual BossDMG%, Dual Gold%</td></tr>
-            </tbody>
+            <tbody id="smelterBody"></tbody>
           </table>
         </div>
         <div class="card">
           <h2>Arcane Rune Matrix</h2>
           <table>
             <thead><tr><th>Rune</th><th>Fixed Base (White)</th><th>Substats (Red)</th><th>Target Role</th></tr></thead>
-            <tbody>
-              <tr><td>Rune of Courage</td><td>HP% +500%</td><td>EXP%, HP%, DEF%</td><td>Frontline Tank / Fortress HP</td></tr>
-              <tr><td>Healing Rune</td><td>REC% +500% x2</td><td>REC%, HP%</td><td>Healers</td></tr>
-              <tr><td>Assault Matrix</td><td>Flat ATK + Weapon ATK%</td><td>Dual ATK%, Crit DMG%</td><td>Hyper-Carries</td></tr>
-              <tr><td>Prosperity Matrix</td><td>Flat DEF + Flat HP</td><td>Dual Gold%, Dual EXP%</td><td>Automated Farming</td></tr>
-            </tbody>
+            <tbody id="runeBody"></tbody>
           </table>
         </div>
       </div>
@@ -179,11 +169,7 @@
         <h2>Wandering Merchant Rotation & Tracker</h2>
         <table>
           <thead><tr><th>Merchant</th><th>Location</th><th>Rotation Cadence</th><th>High-Priority Items</th></tr></thead>
-          <tbody>
-            <tr><td><strong>Boran the Peddler</strong></td><td>Stages 10–25</td><td>Every 4 Hours (Lasts 45m)</td><td>Soulstones, Summon Tickets</td></tr>
-            <tr><td><strong>Alchemist Zephyr</strong></td><td>Stages 26–45</td><td>Every 6 Hours (Lasts 60m)</td><td>Engine Oil, Leaf Essence, Fuel</td></tr>
-            <tr><td><strong>Celestial Nomad Stella</strong></td><td>Stages 46+</td><td>Every 8 Hours (Lasts 60m)</td><td>Stardust Vials, Boost Crystals, Blueprints</td></tr>
-          </tbody>
+          <tbody id="merchantBody"></tbody>
         </table>
       </div>
     </section>
@@ -208,49 +194,31 @@
       document.getElementById(tabId).classList.add('active');
       event.target.classList.add('active');
     }
-    const HEROES = [
-      { id: "jibril", name: "Jibril", rarity: "legend", pos: "Onboard", role: "Dealer", skill: "Savior's Touch: 36 AoE missiles", ex: "Machina Missile (+750% Boss DMG, 2x projectiles)" },
-      { id: "zelos", name: "Zelos", rarity: "legend", pos: "Frontline", role: "Dealer / Tank", skill: "Inevitable Gaze: AoE Fear & Stun", ex: "Devil's Deal (80% lifesteal, invulnerability frames)" },
-      { id: "violet", name: "Violet", rarity: "legend", pos: "Onboard", role: "Summoner / Tank", skill: "Minion Invocations: Frontline summons", ex: "Catalyst (+500% minion HP pool)" },
-      { id: "ravia", name: "Ravia", rarity: "legend", pos: "Frontline", role: "Dealer", skill: "Falling Blossoms: AoE Bleed", ex: "Last Blossom (+500% personal Crit DMG)" },
-      { id: "valentine", name: "Valentine", rarity: "legend", pos: "Onboard", role: "Supporter", skill: "Barren Winds: +200% ATK Aura", ex: "Tactical Array (+150% ATK, +75% Crit DMG)" },
-      { id: "styria", name: "Styria", rarity: "legend", pos: "Onboard", role: "Healer", skill: "Starlight Wind: 40% heal + barrier", ex: "Snowy Protection (+300% allied HP pool)" },
-      { id: "ungula", name: "Ungula", rarity: "legend", pos: "Frontline", role: "Dealer", skill: "Scent of Fear: Stacking ATK Speed", ex: "Primal Claws (Rapid execute scaling on Bosses)" },
-      { id: "ruingaladh", name: "Ruingaladh", rarity: "legend", pos: "Onboard", role: "Buffer", skill: "Roaring Tempest: Airborne + ATK buff", ex: "Terraquake (+100% target vulnerability)" },
-      { id: "stella", name: "Stella", rarity: "epic", pos: "Onboard", role: "Supporter", skill: "Cleansing Sea: Dispel + Shield", ex: "Wave Harp (-20% CD, +30% shielded DMG)" },
-      { id: "louis", name: "Louis", rarity: "rare", pos: "Frontline", role: "Dealer / Utility", skill: "Greatsword: AoE Stun + Team CD cut", ex: "Founder's Blade (Continuous cycle acceleration)" }
-    ];
+    let HEROES = [];
     function renderHeroes(list) {
       document.getElementById('heroGrid').innerHTML = list.map(h => `
         <div class="card">
           <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
-            <h3>${h.name}</h3><span class="badge ${h.rarity}">${h.rarity.toUpperCase()}</span>
+            <h3>${h.name}</h3><span class="badge ${h.rarity.toLowerCase()}">${h.rarity.toUpperCase()}</span>
           </div>
-          <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.4rem;"><strong>Position:</strong> ${h.pos} | <strong>Role:</strong> ${h.role}</p>
-          <p style="font-size: 0.85rem; margin-bottom: 0.5rem;"><strong>Skill:</strong> ${h.skill}</p>
-          <p style="font-size: 0.85rem; color: var(--accent);"><strong>EX:</strong> ${h.ex}</p>
+          <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.4rem;"><strong>Position:</strong> ${h.position} | <strong>Role:</strong> ${h.role}</p>
+          <p style="font-size: 0.85rem; margin-bottom: 0.5rem;"><strong>Skill:</strong> ${h.active_skill.name}: ${h.active_skill.description}</p>
+          <p style="font-size: 0.85rem; color: var(--accent);"><strong>EX:</strong> ${h.exclusive_weapon.name} (${h.exclusive_weapon.passive_effect})</p>
         </div>`).join('');
     }
     function filterHeroes() {
       const q = document.getElementById('heroSearch').value.toLowerCase();
-      renderHeroes(HEROES.filter(h => h.name.toLowerCase().includes(q) || h.role.toLowerCase().includes(q) || h.pos.toLowerCase().includes(q)));
+      renderHeroes(HEROES.filter(h => h.name.toLowerCase().includes(q) || h.role.toLowerCase().includes(q) || h.position.toLowerCase().includes(q)));
     }
-    const CONSTELLATIONS = [
-      { id: "thorn", name: "Thorn Blade (Hero ATK)", costPerLevel: 4, max: 10, bonus: "+15% ATK/lvl" },
-      { id: "lyre", name: "Lyre (Support ATK)", costPerLevel: 4, max: 10, bonus: "+20% ATK/lvl" },
-      { id: "stepping", name: "Stepping Stone (Onboard ATK)", costPerLevel: 4, max: 10, bonus: "+8% ATK/lvl" },
-      { id: "gunmount", name: "Gun Mount (Cannon ATK)", costPerLevel: 6, max: 10, bonus: "+25% Cannon ATK/lvl" },
-      { id: "sharpshooter", name: "Sharpshooter (ATK Speed)", costPerLevel: 6, max: 10, bonus: "+5% Speed/lvl" },
-      { id: "irongate", name: "Scorpii: Iron Gate (Fortress HP)", costPerLevel: 15, max: 10, bonus: "+75% Chassis HP/lvl" }
-    ];
-    let allocatedStars = { thorn: 5, lyre: 0, stepping: 5, gunmount: 0, sharpshooter: 5, irongate: 5 };
+    let CONSTELLATIONS = [];
+    let allocatedStars = { thorn_blade: 5, lyre: 0, stepping_stone: 5, gun_mount: 0, sharpshooter: 5, iron_gate: 5 };
     function renderConstellations() {
       document.getElementById('constellationContainer').innerHTML = CONSTELLATIONS.map(c => `
         <div class="card">
           <h3>${c.name}</h3>
-          <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.5rem;">${c.bonus}</p>
+          <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.5rem;">${c.className} · ${c.effects}</p>
           <div style="display: flex; justify-content: space-between; align-items: center;">
-            <label style="font-size: 0.85rem;">Level: <strong>${allocatedStars[c.id]}</strong> / ${c.max}</label>
+            <label style="font-size: 0.85rem;">Level: <strong>${allocatedStars[c.id]}</strong> / ${c.max_level}</label>
             <div>
               <button onclick="changeConstellation('${c.id}', -1)" style="padding: 0.2rem 0.5rem;">-</button>
               <button onclick="changeConstellation('${c.id}', 1)" style="padding: 0.2rem 0.5rem;">+</button>
@@ -262,7 +230,7 @@
     function changeConstellation(id, delta) {
       const node = CONSTELLATIONS.find(c => c.id === id);
       const newLvl = allocatedStars[id] + delta;
-      if (newLvl >= 0 && newLvl <= node.max) {
+      if (newLvl >= 0 && newLvl <= node.max_level) {
         allocatedStars[id] = newLvl;
         renderConstellations();
       }
@@ -274,7 +242,7 @@
     function updateConstellations() {
       const budget = parseInt(document.getElementById('planStardust').value) || 0;
       let spent = 0;
-      CONSTELLATIONS.forEach(c => spent += (allocatedStars[c.id] * c.costPerLevel));
+      CONSTELLATIONS.forEach(c => spent += (allocatedStars[c.id] * c.cost_per_level));
       const rem = budget - spent;
       const el = document.getElementById('planRemaining');
       el.innerText = rem;
@@ -310,7 +278,41 @@
         vEl.innerText = "Early Phase (Stages 1–30)"; vEl.style.color = "var(--text-muted)";
       }
     }
-    window.onload = () => { renderHeroes(HEROES); renderConstellations(); runCalculations(); };
+    function renderEquipment(eq) {
+      document.getElementById('smelterBody').innerHTML = eq.smelter_tiers.map(t => `
+        <tr><td><span class="badge ${t.tier.toLowerCase()}">${t.tier}</span></td><td>${t.white_lines}</td><td>${t.red_lines}</td><td>${t.ideal_rolls.join(', ')}</td></tr>`).join('');
+      document.getElementById('runeBody').innerHTML = eq.runes.map(r => `
+        <tr><td>${r.name}</td><td>${r.fixed_white}</td><td>${r.variable_red.join(', ')}</td><td>${r.target_role}</td></tr>`).join('');
+    }
+    function renderMerchants(list) {
+      document.getElementById('merchantBody').innerHTML = list.map(m => `
+        <tr><td><strong>${m.name}</strong></td><td>${m.location}</td><td>${m.rotation}</td><td>${m.items.join(', ')}</td></tr>`).join('');
+    }
+    async function loadJson(name) {
+      const res = await fetch(`data/${name}.json`);
+      if (!res.ok) throw new Error(`data/${name}.json: HTTP ${res.status}`);
+      return res.json();
+    }
+    window.onload = async () => {
+      runCalculations();
+      try {
+        const [heroes, constellations, equipment, merchants] = await Promise.all(
+          ['heroes', 'constellations', 'equipment', 'merchants'].map(loadJson));
+        HEROES = heroes;
+        // The planner shows the nebulae that have a stardust cost in the data.
+        CONSTELLATIONS = constellations.classes.flatMap(cls => cls.nebulae
+          .filter(n => n.cost_per_level !== undefined)
+          .map(n => ({ ...n, className: cls.class_name })));
+        renderHeroes(HEROES);
+        renderConstellations();
+        renderEquipment(equipment);
+        renderMerchants(merchants);
+      } catch (err) {
+        console.error(err);
+        document.querySelector('main').insertAdjacentHTML('afterbegin',
+          `<div class="card" style="border-color: var(--danger);">Could not load game data (${err.message}). If you opened this file directly, serve the folder over HTTP instead, e.g. <code>python3 -m http.server</code>.</div>`);
+      }
+    };
   </script>
 </body>
 </html>

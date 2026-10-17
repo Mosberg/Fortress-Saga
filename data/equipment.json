@@ -48,7 +48,8 @@
         "EXP%",
         "HP%",
         "DEF%"
-      ]
+      ],
+      "target_role": "Frontline Tank / Fortress HP"
     },
     {
       "id": "healing",
@@ -58,7 +59,8 @@
       "variable_red": [
         "REC%",
         "HP%"
-      ]
+      ],
+      "target_role": "Healers"
     },
     {
       "id": "assault",
@@ -68,7 +70,8 @@
       "variable_red": [
         "Dual ATK%",
         "Crit DMG%"
-      ]
+      ],
+      "target_role": "Hyper-Carries"
     },
     {
       "id": "prosperity",
@@ -78,7 +81,8 @@
       "variable_red": [
         "Dual Gold%",
         "Dual EXP%"
-      ]
+      ],
+      "target_role": "Automated Farming"
     }
   ]
 }
