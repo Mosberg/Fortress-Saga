@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heroes | Fortress Saga Hub</title>
+  <meta name="description" content="Fortress Saga hero wiki: rarity, position, role, skills and passives with sources.">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+  <header id="site-header"></header>
+  <main>
+    <h1 class="page-title">Hero wiki</h1>
+    <div class="page-lead" id="hero-notes"></div>
+    <div class="toolbar">
+      <input type="search" id="hero-search" placeholder="Search name, role or skill" aria-label="Search heroes">
+      <select id="filter-rarity" aria-label="Rarity"><option value="">All rarities</option></select>
+      <select id="filter-position" aria-label="Position"><option value="">All positions</option></select>
+      <select id="filter-status" aria-label="Status">
+        <option value="">Any status</option>
+        <option value="confirmed">Has confirmed facts</option>
+        <option value="corrected">Has corrections</option>
+        <option value="unconfirmed">Has unconfirmed claims</option>
+      </select>
+      <button class="btn" id="hero-csv" type="button">Download CSV</button>
+      <span class="muted" id="hero-count"></span>
+    </div>
+    <div class="grid" id="hero-grid"></div>
+    <section class="card">
+      <h2>Also in the game</h2>
+      <p>Tier lists name these heroes too; no details are recorded here yet: <span id="listed-only"></span>.</p>
+    </section>
+  </main>
+  <footer id="site-footer"></footer>
+  <script src="assets/js/core.js"></script>
+  <script src="assets/js/pages/heroes.js"></script>
+</body>
+</html>

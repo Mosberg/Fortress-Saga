@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mosberg.github.io/Fortress-Saga/schemas/heroes.schema.json",
+  "title": "Heroes",
+  "type": "object",
+  "required": [
+    "notes",
+    "heroes",
+    "listed_only"
+  ],
+  "properties": {
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "heroes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "rarity",
+          "position",
+          "role",
+          "skill",
+          "facts"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9_]+$"
+          },
+          "name": {
+            "type": "string"
+          },
+          "rarity": {
+            "$ref": "common.schema.json#/$defs/rarity"
+          },
+          "position": {
+            "enum": [
+              "Frontline",
+              "Onboard",
+              null
+            ]
+          },
+          "role": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "skill": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "facts": {
+            "$ref": "common.schema.json#/$defs/facts",
+            "minItems": 1
+          }
+        }
+      }
+    },
+    "listed_only": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

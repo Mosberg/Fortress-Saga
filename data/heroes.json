@@ -1,232 +1,197 @@
-[
-  {
-    "id": "jibril",
-    "name": "Jibril",
-    "rarity": "Legend",
-    "position": "Onboard",
-    "role": "Dealer",
-    "base_parameters": {
-      "base_atk": 4850,
-      "atk_growth": 142.5,
-      "base_hp": 24200,
-      "hp_growth": 680.0,
-      "base_def": 1200
+{
+  "notes": [
+    "Hero names are all confirmed by at least one tier list. Rarity, position and role are shown as the drafts gave them unless a source says otherwise; check the status mark on each line.",
+    "No public source gives hero base stats, growth values or cooldowns, so this hub does not list them.",
+    "For potentials, gameplay.tips says to take Skill Effect % and Boss DMG % and ignore ATK %. Skill Effect does not apply to passives or summons."
+  ],
+  "heroes": [
+    {
+      "id": "jibril", "name": "Jibril", "rarity": "Legend", "position": "Onboard", "role": "Dealer",
+      "skill": "Savior's Touch",
+      "facts": [
+        { "text": "Onboard attacker. Savior's Touch hits for up to 800% of ATK.", "status": "confirmed", "sources": ["ttp", "ld", "pg"] },
+        { "text": "Passive extends projectile range.", "status": "confirmed", "sources": ["ttp"] },
+        { "text": "Skill fires 36 strikes; exclusive weapon \"Machina Missile\" doubles radius and strikes and adds +750% Boss DMG.", "status": "unconfirmed", "sources": [] }
+      ]
     },
-    "active_skill": {
-      "name": "Savior's Touch",
-      "description": "Fires 36 rapid artillery strikes dealing AoE damage across randomized targets.",
-      "damage_multiplier": "(800 + X)%"
+    {
+      "id": "zelos", "name": "Zelos", "rarity": "Legend", "position": "Frontline", "role": "Dealer / Tank",
+      "skill": "Shadow Strike",
+      "facts": [
+        { "text": "Frontline. Skill inflicts Fear on mobs and stuns bosses; life drain through \"Deal with the Devil\".", "status": "confirmed", "sources": ["ld", "ttp"] },
+        { "text": "Skill is called Shadow Strike (the drafts called it \"Inevitable Gaze\").", "status": "corrected", "sources": ["ld"] },
+        { "text": "Past stage 50 you need Zelos with his exclusive weapon, plus the Red Barrier Kit.", "status": "confirmed", "sources": ["gt"] },
+        { "text": "4s Fear / 4s Stun, 66.6-80% lifesteal, +750% Boss DMG.", "status": "unconfirmed", "sources": [] }
+      ]
     },
-    "exclusive_weapon": {
-      "name": "Machina Missile",
-      "passive_effect": "Doubles skill radius and strike count; adds +750% Boss Damage scalar."
+    {
+      "id": "violet", "name": "Violet", "rarity": "Legend", "position": "Onboard", "role": "Summoner",
+      "skill": null,
+      "facts": [
+        { "text": "Summons Shadow Soldiers; passive boosts her summons.", "status": "confirmed", "sources": ["pg", "ld"] },
+        { "text": "Skill Effect % does not help her: it does not apply to summons.", "status": "corrected", "sources": ["gt"] },
+        { "text": "Skill name \"Minion Invocations\" and exclusive weapon effects.", "status": "unconfirmed", "sources": [] }
+      ]
+    },
+    {
+      "id": "ravia", "name": "Ravia", "rarity": "Legend", "position": "Frontline", "role": "Dealer",
+      "skill": "Falling Blossoms",
+      "facts": [
+        { "text": "Falling Blossoms deals 240+740% of ATK and bleeds over 5s.", "status": "confirmed", "sources": ["mm"] },
+        { "text": "Passive Last Blossom executes enemies at 15% HP or lower (not +500% Crit DMG as the drafts said).", "status": "corrected", "sources": ["mm"] }
+      ]
+    },
+    {
+      "id": "bernhard", "name": "Bernhard", "rarity": "Legend", "position": "Frontline", "role": "Tank",
+      "skill": "Frozen Battle Cry",
+      "facts": [
+        { "text": "Frozen Battle Cry taunts and halves enemy DEF for 3s; passive ignores all crowd control.", "status": "confirmed", "sources": ["ttp", "pg"] },
+        { "text": "Role is Tank and the skill is Frozen Battle Cry (drafts: Bruiser, \"Piercing Cleave\").", "status": "corrected", "sources": ["ttp"] },
+        { "text": "+400% damage amp and 80% lifesteal.", "status": "unconfirmed", "sources": [] }
+      ]
+    },
+    {
+      "id": "styria", "name": "Styria", "rarity": "Legend", "position": "Onboard", "role": "Healer",
+      "skill": null,
+      "facts": [
+        { "text": "Heals, shields, and passively raises all allies' HP.", "status": "confirmed", "sources": ["pg"] },
+        { "text": "40% heal, barrier size, +300% ally HP.", "status": "unconfirmed", "sources": [] }
+      ]
+    },
+    {
+      "id": "ungula", "name": "Ungula", "rarity": "Legend", "position": "Frontline", "role": "Dealer",
+      "skill": null,
+      "facts": [
+        { "text": "Listed as S+ tier.", "status": "confirmed", "sources": ["pg"] },
+        { "text": "Stacking attack speed passive up to +200%.", "status": "unconfirmed", "sources": [] }
+      ]
+    },
+    {
+      "id": "valentine", "name": "Valentine", "rarity": "Legend", "position": "Onboard", "role": "Buffer",
+      "skill": null,
+      "facts": [
+        { "text": "Listed as S tier.", "status": "confirmed", "sources": ["pg"] },
+        { "text": "+200% team ATK aura; exclusive weapon +150%.", "status": "unconfirmed", "sources": [] }
+      ]
+    },
+    {
+      "id": "ruingaladh", "name": "Ruingaladh", "rarity": "Legend", "position": "Onboard", "role": "Dealer",
+      "skill": "Roaring Tempest",
+      "facts": [
+        { "text": "Roaring Tempest deals 260+796% of ATK, knocks enemies airborne and raises allies' ATK by 30+88%.", "status": "confirmed", "sources": ["mm", "ld"] },
+        { "text": "Passive Nature's Mark: marked enemies take +100% damage for 5s.", "status": "confirmed", "sources": ["mm"] }
+      ]
+    },
+    {
+      "id": "elrond", "name": "Elrond", "rarity": "Legend", "position": "Onboard", "role": "Healer",
+      "skill": null,
+      "facts": [
+        { "text": "Heals for 100% ATK, pulsing 7 times.", "status": "confirmed", "sources": ["ld", "mumu"] },
+        { "text": "Passive Blessing of Light triples max HP for 8s (x3, not +300%).", "status": "corrected", "sources": ["ld", "mumu"] },
+        { "text": "Skill name: sources disagree between Garden of Recovery and Light of Healing.", "status": "unconfirmed", "sources": ["ld", "mumu"] }
+      ]
+    },
+    {
+      "id": "tilly", "name": "Tilly", "rarity": "Legend", "position": "Frontline", "role": "Tank",
+      "skill": null,
+      "facts": [
+        { "text": "Listed as A tier.", "status": "confirmed", "sources": ["pg"] },
+        { "text": "50% damage mitigation; summons a cannon on death.", "status": "unconfirmed", "sources": [] }
+      ]
+    },
+    {
+      "id": "vajra", "name": "Vajra", "rarity": "Legend", "position": "Frontline", "role": "Bruiser",
+      "skill": null,
+      "facts": [
+        { "text": "Frontline, A tier.", "status": "confirmed", "sources": ["ld"] },
+        { "text": "Every 10th hit deals bonus damage.", "status": "unconfirmed", "sources": [] }
+      ]
+    },
+    {
+      "id": "iris", "name": "Iris", "rarity": "Legend", "position": "Onboard", "role": "Buffer",
+      "skill": null,
+      "facts": [
+        { "text": "Adds a flat ATK buff in the community damage formula.", "status": "confirmed", "sources": ["gt"] },
+        { "text": "Sheep mounts that transfer stats to allies.", "status": "unconfirmed", "sources": [] }
+      ]
+    },
+    {
+      "id": "stella", "name": "Stella", "rarity": "Epic", "position": "Onboard", "role": "Supporter",
+      "skill": null,
+      "facts": [
+        { "text": "Cleanses debuffs and shields allies.", "status": "unconfirmed", "sources": [] }
+      ]
+    },
+    {
+      "id": "annie", "name": "Annie", "rarity": "Epic", "position": null, "role": null,
+      "skill": null,
+      "facts": [
+        { "text": "75% chance to reset her skill cooldown; crit damage weapon \"Giant's Spoon\". The drafts gave this kit to Delfin.", "status": "corrected", "sources": ["hp-mechanics"] }
+      ]
+    },
+    {
+      "id": "delfin", "name": "Delfin", "rarity": "Epic", "position": "Frontline", "role": "Dealer",
+      "skill": null,
+      "facts": [
+        { "text": "The drafts' Delfin kit (75% cooldown reset, crit weapon) actually belongs to Annie. Delfin's own kit is not documented yet.", "status": "corrected", "sources": ["hp-mechanics"] }
+      ]
+    },
+    {
+      "id": "bruce", "name": "Bruce", "rarity": "Unique", "position": "Onboard", "role": "Buffer",
+      "skill": null,
+      "facts": [
+        { "text": "Onboard; AoE skill based on ATK; passive boosts all heroes' ATK.", "status": "confirmed", "sources": ["pg", "ld"] },
+        { "text": "Rarity and numbers.", "status": "unconfirmed", "sources": [] }
+      ]
+    },
+    {
+      "id": "scarecrow", "name": "Scarecrow", "rarity": "Unique", "position": "Onboard", "role": "Healer",
+      "skill": null,
+      "facts": [
+        { "text": "Heals and turns excess healing into a shield.", "status": "confirmed", "sources": ["pg"] },
+        { "text": "Heal size of 60%.", "status": "unconfirmed", "sources": [] }
+      ]
+    },
+    {
+      "id": "ivy", "name": "Ivy", "rarity": "Unique", "position": "Frontline", "role": "Bruiser",
+      "skill": null,
+      "facts": [
+        { "text": "Guaranteed crits on the rearmost enemy.", "status": "unconfirmed", "sources": [] }
+      ]
+    },
+    {
+      "id": "howling", "name": "Howling", "rarity": "Unique", "position": "Frontline", "role": "Dealer",
+      "skill": null,
+      "facts": [
+        { "text": "Teleports to a target and triples attack speed for 7s.", "status": "unconfirmed", "sources": [] }
+      ]
+    },
+    {
+      "id": "gildong", "name": "Gildong", "rarity": "Rare", "position": "Onboard", "role": "Buffer",
+      "skill": null,
+      "facts": [
+        { "text": "Buffer; his ATK buff is a multiplier in the community damage formula, described as a 200%+ ATK boost.", "status": "confirmed", "sources": ["gt", "ld"] },
+        { "text": "Base buff of 30%.", "status": "unconfirmed", "sources": [] }
+      ]
+    },
+    {
+      "id": "louis", "name": "Louis", "rarity": "Rare", "position": "Frontline", "role": "Dealer",
+      "skill": null,
+      "facts": [
+        { "text": "Has a profile on the official site.", "status": "confirmed", "sources": ["cookapps"] },
+        { "text": "Stun skill; reduces team skill cooldowns.", "status": "unconfirmed", "sources": [] }
+      ]
+    },
+    {
+      "id": "winter", "name": "Winter", "rarity": "Legend", "position": "Frontline", "role": "Tank",
+      "skill": null,
+      "facts": [ { "text": "Named by tier lists as a Legend frontline tank; which list was not recorded, so check before relying on it.", "status": "unconfirmed", "sources": [] } ]
+    },
+    {
+      "id": "anubis", "name": "Anubis", "rarity": null, "position": null, "role": null,
+      "skill": null,
+      "facts": [ { "text": "Added in patch 2.1.01.", "status": "confirmed", "sources": ["appstore"] } ]
     }
-  },
-  {
-    "id": "zelos",
-    "name": "Zelos",
-    "rarity": "Legend",
-    "position": "Frontline",
-    "role": "Dealer / Tank",
-    "base_parameters": {
-      "base_atk": 3650,
-      "atk_growth": 115.0,
-      "base_hp": 48000,
-      "hp_growth": 1450.0,
-      "base_def": 2800
-    },
-    "active_skill": {
-      "name": "Inevitable Gaze",
-      "description": "Deals AoE damage; inflicts 4s Fear to standard mobs and 4s Stun to Stage Bosses.",
-      "damage_multiplier": "(200 + X)%"
-    },
-    "exclusive_weapon": {
-      "name": "Devil's Deal",
-      "passive_effect": "Converts 66.6% to 80% damage dealt to HP; grants +750% Boss DMG and invulnerability frames."
-    }
-  },
-  {
-    "id": "violet",
-    "name": "Violet",
-    "rarity": "Legend",
-    "position": "Onboard",
-    "role": "Summoner / Tank",
-    "base_parameters": {
-      "base_atk": 2900,
-      "atk_growth": 95.0,
-      "base_hp": 31000,
-      "hp_growth": 920.0,
-      "base_def": 1800
-    },
-    "active_skill": {
-      "name": "Minion Invocations",
-      "description": "Deploys frontline constructs that absorb lethal strikes.",
-      "damage_multiplier": null
-    },
-    "exclusive_weapon": {
-      "name": "Exclusive Catalyst",
-      "passive_effect": "Significantly scales minion baseline HP pool."
-    }
-  },
-  {
-    "id": "ravia",
-    "name": "Ravia",
-    "rarity": "Legend",
-    "position": "Frontline",
-    "role": "Dealer",
-    "base_parameters": {
-      "base_atk": 4100,
-      "atk_growth": 128.0,
-      "base_hp": 36000,
-      "hp_growth": 1050.0,
-      "base_def": 1900
-    },
-    "active_skill": {
-      "name": "Falling Blossoms",
-      "description": "Inflicts AoE damage and applies a lingering 5s Bleed.",
-      "damage_multiplier": "(240 + X)%"
-    },
-    "exclusive_weapon": {
-      "name": "Last Blossom",
-      "passive_effect": "Permanently escalates personal Critical Damage by +500%."
-    }
-  },
-  {
-    "id": "styria",
-    "name": "Styria (Staria)",
-    "rarity": "Legend",
-    "position": "Onboard",
-    "role": "Healer",
-    "base_parameters": {
-      "base_atk": 2100,
-      "atk_growth": 65.0,
-      "base_hp": 34000,
-      "hp_growth": 990.0,
-      "base_def": 2100
-    },
-    "active_skill": {
-      "name": "Starlight Wind",
-      "description": "Restores 40% Max HP to allies and grants a barrier equal to (50 + X)% HP for 3s.",
-      "damage_multiplier": null
-    },
-    "exclusive_weapon": {
-      "name": "Snowy Protection",
-      "passive_effect": "Permanently increases allied heroes' Max HP by +300% during battle encounters."
-    }
-  },
-  {
-    "id": "valentine",
-    "name": "Valentine",
-    "rarity": "Legend",
-    "position": "Onboard",
-    "role": "Supporter / Buffer",
-    "base_parameters": {
-      "base_atk": 2400,
-      "atk_growth": 78.0,
-      "base_hp": 28000,
-      "hp_growth": 810.0,
-      "base_def": 1500
-    },
-    "active_skill": {
-      "name": "Barren Winds",
-      "description": "Grants +200% ATK to all deployed allied heroes while stationed aboard.",
-      "damage_multiplier": null
-    },
-    "exclusive_weapon": {
-      "name": "Tactical Array",
-      "passive_effect": "Adds +150% ATK and +75% allied Crit DMG."
-    }
-  },
-  {
-    "id": "ungula",
-    "name": "Ungula",
-    "rarity": "Legend",
-    "position": "Frontline",
-    "role": "Dealer",
-    "base_parameters": {
-      "base_atk": 4300,
-      "atk_growth": 135.0,
-      "base_hp": 38000,
-      "hp_growth": 1120.0,
-      "base_def": 2000
-    },
-    "active_skill": {
-      "name": "Scent of Fear",
-      "description": "Passive ramps Attack Speed, Move Speed, and CD Recovery by 10% every 2 hits (up to +200%).",
-      "damage_multiplier": null
-    },
-    "exclusive_weapon": {
-      "name": "Primal Claws",
-      "passive_effect": "Converts passive stack generation into massive execute scaling on bosses."
-    }
-  },
-  {
-    "id": "ruingaladh",
-    "name": "Ruingaladh",
-    "rarity": "Legend",
-    "position": "Onboard",
-    "role": "Buffer / Dealer",
-    "base_parameters": {
-      "base_atk": 3800,
-      "atk_growth": 110.0,
-      "base_hp": 29000,
-      "hp_growth": 850.0,
-      "base_def": 1600
-    },
-    "active_skill": {
-      "name": "Roaring Tempest",
-      "description": "Frontal cyclone dealing 260% ATK, knocking targets airborne and buffing allied ATK by (30 + X)% for 5s.",
-      "damage_multiplier": "260%"
-    },
-    "exclusive_weapon": {
-      "name": "Terraquake Wrath",
-      "passive_effect": "Generates a secondary tremor that inflicts an active +100% vulnerability debuff."
-    }
-  },
-  {
-    "id": "stella",
-    "name": "Stella",
-    "rarity": "Epic",
-    "position": "Onboard",
-    "role": "Supporter",
-    "base_parameters": {
-      "base_atk": 1800,
-      "atk_growth": 55.0,
-      "base_hp": 22000,
-      "hp_growth": 650.0,
-      "base_def": 1300
-    },
-    "active_skill": {
-      "name": "Cleansing Sea",
-      "description": "Dispels debuffs from all allies and grants a protective shield.",
-      "damage_multiplier": null
-    },
-    "exclusive_weapon": {
-      "name": "Wave Harp",
-      "passive_effect": "Compresses CD by 20%, adds a 50% heal, and boosts shielded allies' DMG by +30%."
-    }
-  },
-  {
-    "id": "louis",
-    "name": "Louis",
-    "rarity": "Rare",
-    "position": "Frontline",
-    "role": "Dealer / Utility",
-    "base_parameters": {
-      "base_atk": 1500,
-      "atk_growth": 45.0,
-      "base_hp": 19000,
-      "hp_growth": 520.0,
-      "base_def": 1100
-    },
-    "active_skill": {
-      "name": "Greatsword of Freedom",
-      "description": "Swings for (160 + X)% ATK, dealing 3s Stun; passive reduces team skill cooldowns.",
-      "damage_multiplier": "(160 + X)%"
-    },
-    "exclusive_weapon": {
-      "name": "Founder's Blade",
-      "passive_effect": "Accelerates team-wide active cycling, enabling continuous control locks."
-    }
-  }
-]
+  ],
+  "listed_only": ["Elizabeth", "Lilith", "Malleus", "Victor", "Bjorn", "MK-31", "Solum", "Waldeck", "Soba", "Eclipse", "Melaina"]
+}

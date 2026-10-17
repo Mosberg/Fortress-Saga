@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mosberg.github.io/Fortress-Saga/schemas/sources.schema.json",
+  "title": "Sources",
+  "type": "object",
+  "required": [
+    "checked_on",
+    "game_version",
+    "statuses",
+    "sources",
+    "not_reachable"
+  ],
+  "properties": {
+    "checked_on": {
+      "type": "string",
+      "format": "date"
+    },
+    "game_version": {
+      "type": "string"
+    },
+    "statuses": {
+      "type": "object",
+      "required": [
+        "confirmed",
+        "corrected",
+        "unconfirmed"
+      ],
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "url",
+          "date"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+$"
+          },
+          "name": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "date": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "not_reachable": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "url"
+        ]
+      }
+    }
+  }
+}

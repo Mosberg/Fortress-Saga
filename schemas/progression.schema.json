@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mosberg.github.io/Fortress-Saga/schemas/progression.schema.json",
+  "title": "Progression",
+  "type": "object",
+  "required": [
+    "unlocks",
+    "dungeons",
+    "tips",
+    "phases"
+  ],
+  "properties": {
+    "unlocks": {
+      "type": "array",
+      "items": {
+        "allOf": [
+          {
+            "$ref": "common.schema.json#/$defs/sourced"
+          }
+        ],
+        "required": [
+          "stage",
+          "feature"
+        ]
+      }
+    },
+    "dungeons": {
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/$defs/sourced"
+        }
+      ],
+      "required": [
+        "items"
+      ]
+    },
+    "tips": {
+      "type": "array",
+      "items": {
+        "allOf": [
+          {
+            "$ref": "common.schema.json#/$defs/sourced"
+          }
+        ],
+        "required": [
+          "topic",
+          "text"
+        ]
+      }
+    },
+    "phases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "stages",
+          "steps"
+        ],
+        "properties": {
+          "steps": {
+            "$ref": "common.schema.json#/$defs/facts"
+          }
+        }
+      }
+    }
+  }
+}

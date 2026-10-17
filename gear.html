@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gear and runes | Fortress Saga Hub</title>
+  <meta name="description" content="Fortress Saga gear and rune reference: line counts, Legend red roll ranges, stat priorities and a roll checker.">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+  <header id="site-header"></header>
+  <main>
+    <h1 class="page-title">Gear and runes</h1>
+    <p class="page-lead">Equipment and rune rules, the known Legend roll ranges, and a checker that tells you whether a roll is worth keeping.</p>
+    <section class="grid-2">
+      <div class="card"><h2>Equipment basics</h2><div id="gear-facts"></div></div>
+      <div class="card">
+        <h2>Roll checker</h2>
+        <div class="field"><label for="roll-stat">Red stat on a Legend weapon or trinket</label><select id="roll-stat"></select></div>
+        <div class="field"><label for="roll-value">Rolled value (%)</label><input type="number" id="roll-value"></div>
+        <div id="roll-result"></div>
+      </div>
+    </section>
+    <section class="grid-2">
+      <div class="card"><h2>Legend red roll ranges</h2><div id="red-rolls"></div></div>
+      <div class="card"><h2>Rune line counts</h2><div id="rune-lines"></div></div>
+    </section>
+    <section class="grid-2">
+      <div class="card"><h2>Stat priority</h2><div id="stat-priority"></div></div>
+      <div class="card"><h2>Rune names from the drafts</h2><div id="draft-runes"></div></div>
+    </section>
+  </main>
+  <footer id="site-footer"></footer>
+  <script src="assets/js/core.js"></script>
+  <script src="assets/js/pages/gear.js"></script>
+</body>
+</html>

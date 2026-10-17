@@ -3,314 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fortress Saga Hub & Mechanics Toolkit | Mosberg</title>
-  <style>
-    :root {
-      --bg-dark: #0f1117; --bg-card: #181c26; --bg-panel: #222736;
-      --primary: #f59e0b; --primary-hover: #d97706; --accent: #38bdf8;
-      --danger: #ef4444; --text: #f3f4f6; --text-muted: #9ca3af;
-      --border: #374151; --legend: #f59e0b; --epic: #a855f7;
-      --unique: #3b82f6; --rare: #10b981;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
-    body { background-color: var(--bg-dark); color: var(--text); display: flex; flex-direction: column; min-height: 100vh; }
-    header { background: var(--bg-card); border-bottom: 2px solid var(--border); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
-    header h1 { font-size: 1.4rem; color: var(--primary); }
-    header a { color: var(--accent); text-decoration: none; font-size: 0.9rem; }
-    nav { display: flex; background: var(--bg-panel); border-bottom: 1px solid var(--border); overflow-x: auto; }
-    nav button { background: none; border: none; outline: none; padding: 0.8rem 1.5rem; color: var(--text-muted); cursor: pointer; font-weight: 600; white-space: nowrap; border-bottom: 3px solid transparent; }
-    nav button:hover { color: var(--text); }
-    nav button.active { color: var(--primary); border-bottom: 3px solid var(--primary); background: rgba(245, 158, 11, 0.08); }
-    main { flex: 1; padding: 1.5rem; max-width: 1400px; margin: 0 auto; width: 100%; }
-    .tab-content { display: none; }
-    .tab-content.active { display: block; }
-    .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 1.5rem; }
-    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
-    .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem; }
-    .card h2 { color: var(--primary); font-size: 1.15rem; margin-bottom: 0.75rem; border-bottom: 1px solid var(--border); padding-bottom: 0.4rem; }
-    .card h3 { color: var(--accent); font-size: 1rem; margin-bottom: 0.5rem; }
-    .form-group { margin-bottom: 1rem; }
-    .form-group label { display: block; font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.25rem; }
-    .form-group input, .form-group select { width: 100%; padding: 0.5rem; background: var(--bg-panel); border: 1px solid var(--border); color: #fff; border-radius: 4px; }
-    .toggle-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.6rem; }
-    .metric-box { background: var(--bg-panel); border-left: 4px solid var(--primary); padding: 0.75rem 1rem; margin-bottom: 0.75rem; border-radius: 0 4px 4px 0; }
-    .metric-box .label { font-size: 0.8rem; color: var(--text-muted); }
-    .metric-box .value { font-size: 1.3rem; font-weight: bold; color: #fff; }
-    table { width: 100%; border-collapse: collapse; margin-top: 0.5rem; font-size: 0.85rem; }
-    th, td { padding: 0.6rem; border: 1px solid var(--border); text-align: left; }
-    th { background: var(--bg-panel); color: var(--primary); }
-    tr:nth-child(even) { background: rgba(255, 255, 255, 0.02); }
-    .badge { display: inline-block; padding: 0.15rem 0.5rem; font-size: 0.75rem; font-weight: bold; border-radius: 4px; }
-    .badge.legend { background: rgba(245, 158, 11, 0.2); color: var(--legend); border: 1px solid var(--legend); }
-    .badge.epic { background: rgba(168, 85, 247, 0.2); color: var(--epic); border: 1px solid var(--epic); }
-    .badge.unique { background: rgba(59, 130, 246, 0.2); color: var(--unique); border: 1px solid var(--unique); }
-    .badge.rare { background: rgba(16, 185, 129, 0.2); color: var(--rare); border: 1px solid var(--rare); }
-    .search-box { width: 100%; padding: 0.6rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; color: #fff; margin-bottom: 1rem; }
-    footer { text-align: center; padding: 1.5rem; font-size: 0.85rem; color: var(--text-muted); border-top: 1px solid var(--border); background: var(--bg-card); }
-  </style>
+  <title>Home | Fortress Saga Hub</title>
+  <meta name="description" content="Fan hub for Fortress Saga: AFK RPG with a hero wiki, merchant timer, constellation planner, damage calculator and guides.">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
-  <header>
-    <h1>⚙️ Fortress Saga Hub & Toolkit</h1>
-    <a href="https://github.com/Mosberg" target="_blank" rel="noopener">GitHub: @Mosberg</a>
-  </header>
-  <nav>
-    <button class="active" onclick="switchTab('calculators')">Damage & EHP Calculator</button>
-    <button onclick="switchTab('constellations')">Constellation Planner</button>
-    <button onclick="switchTab('heroes')">Hero Wiki & Roster</button>
-    <button onclick="switchTab('engines')">Engines & Machina</button>
-    <button onclick="switchTab('equipment')">Gear, Runes & Smelter</button>
-    <button onclick="switchTab('merchants')">Wandering Merchants</button>
-    <button onclick="switchTab('guides')">Meta & Strategy Guides</button>
-  </nav>
+  <header id="site-header"></header>
   <main>
-    <section id="calculators" class="tab-content active">
-      <div class="grid-2">
-        <div class="card">
-          <h2>Hero DPS Pipeline Calculator</h2>
-          <div class="form-group">
-            <label>Selected Hyper-Carry</label>
-            <select id="calcHero" onchange="runCalculations()">
-              <option value="jibril">Jibril (Artillery Onboard)</option>
-              <option value="zelos">Zelos (Frontline Dealer/Tank)</option>
-              <option value="ravia">Ravia (Crit Vanguard)</option>
-              <option value="ungula">Ungula (Stacking Execute)</option>
-            </select>
-          </div>
-          <div class="form-group"><label>Hero Base Attack</label><input type="number" id="calcBaseAtk" value="4850" oninput="runCalculations()"></div>
-          <div class="form-group"><label>Gold Level Enhancement (+%)</label><input type="number" id="calcGoldAtk" value="850" oninput="runCalculations()"></div>
-          <div class="form-group"><label>Constellation & Gear Attack (+%)</label><input type="number" id="calcBonusAtk" value="420" oninput="runCalculations()"></div>
-          <div class="form-group"><label>Skill Effect (+%)</label><input type="number" id="calcSkillEffect" value="280" oninput="runCalculations()"></div>
-          <div class="form-group"><label>Boss Damage Scalar (+%)</label><input type="number" id="calcBossDmg" value="750" oninput="runCalculations()"></div>
-          <div class="toggle-row"><label>Valentine Aboard (+200% Team ATK)</label><input type="checkbox" id="calcValBuff" checked onchange="runCalculations()"></div>
-          <div class="toggle-row"><label>Equip Exclusive Weapon (EX)</label><input type="checkbox" id="calcExWeapon" checked onchange="runCalculations()"></div>
-        </div>
-        <div class="card">
-          <h2>Live Damage & Fortress EHP Metrics</h2>
-          <div class="metric-box"><div class="label">Calculated Single-Target Boss DPS</div><div class="value" id="resHeroDps">0</div></div>
-          <div class="metric-box" style="border-left-color: var(--accent);"><div class="label">Effective Fortress HP (EHP)</div><div class="value" id="resFortressEhp">0</div></div>
-          <div class="metric-box" style="border-left-color: var(--rare);"><div class="label">Progression Viability Index</div><div class="value" id="resViability">-</div></div>
-          <h3 style="margin-top: 1rem;">Fortress Chassis Parameters</h3>
-          <div class="form-group"><label>Base Fortress HP</label><input type="number" id="calcFortBaseHp" value="150000" oninput="runCalculations()"></div>
-          <div class="form-group"><label>Engine HP Multiplier (+%)</label><input type="number" id="calcEngineHp" value="650" oninput="runCalculations()"></div>
-          <div class="toggle-row"><label>Scorpii Iron Gate Nebula Active</label><input type="checkbox" id="calcIronGate" checked onchange="runCalculations()"></div>
-          <div class="toggle-row"><label>Styria Deployed (+300% HP Aura)</label><input type="checkbox" id="calcStyria" checked onchange="runCalculations()"></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="constellations" class="tab-content">
+    <h1 class="page-title">Fortress Saga Hub</h1>
+    <p class="page-lead">A fan-made toolkit for Fortress Saga: AFK RPG. Every number on this site is marked with where it came from, so you can tell checked facts from guesses.</p>
+    <section class="grid-2">
       <div class="card">
-        <h2>Celestial Constellation Stardust Planner</h2>
-        <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 1.5rem;">
-          <div><strong>Total Stardust:</strong> <input type="number" id="planStardust" value="480" style="width: 100px; padding: 0.3rem;" oninput="updateConstellations()"></div>
-          <div><strong>Remaining:</strong> <span id="planRemaining" style="color: var(--primary); font-weight: bold;">480</span></div>
-          <button onclick="resetConstellations()" style="padding: 0.4rem 0.8rem; background: var(--danger); border: none; color: #fff; border-radius: 4px; cursor: pointer;">Reset All</button>
-        </div>
-        <div class="grid-3" id="constellationContainer"></div>
+        <h2>Wandering merchants</h2>
+        <div id="merchant-clock"></div>
+        <p class="muted" style="margin-top:0.5rem"><a href="merchants.html">Schedule and slime prices</a></p>
       </div>
-    </section>
-
-    <section id="heroes" class="tab-content">
-      <input type="text" id="heroSearch" class="search-box" placeholder="Search heroes..." oninput="filterHeroes()">
-      <div class="grid-3" id="heroGrid"></div>
-    </section>
-
-    <section id="engines" class="tab-content">
-      <div class="grid-2">
-        <div class="card">
-          <h2>Standard Engines & Capacity</h2>
-          <table>
-            <thead><tr><th>Slot</th><th>Unlock Condition</th><th>Optimal Stat Lines</th></tr></thead>
-            <tbody>
-              <tr><td>Slot 1</td><td>Default</td><td>Fortress HP / Cannon ATK</td></tr>
-              <tr><td>Slot 2</td><td>Augmentation 5</td><td>Fortress HP% / Fortress HP% (Meta Pivot)</td></tr>
-              <tr><td>Slot 3</td><td>Expansion Tier 3</td><td>Fortress DEF% / Cannon ATK Speed</td></tr>
-              <tr><td>Slot 4</td><td>Expansion Tier 5</td><td>Fortress HP% / Cannon ATK Speed</td></tr>
-              <tr><td>Slot 5-8</td><td>Augmentation 10-15</td><td>Full Fortress HP% Stacking</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="card">
-          <h2>Machina Engineering (Stage 50-20+)</h2>
-          <table>
-            <thead><tr><th>Precision Part</th><th>Scaling Attribute</th><th>Adjacency Bonus</th></tr></thead>
-            <tbody>
-              <tr><td>Hydraulic Booster</td><td>Fortress DEF +40%</td><td>+10% Damage Mitigation to adjacent plates</td></tr>
-              <tr><td>Turbocharger Core</td><td>Cannon ATK Speed +15%</td><td>+5% Boss DMG per adjacent artillery processor</td></tr>
-              <tr><td>Vanguard Reinforcer</td><td>Fortress HP +120%</td><td>Converts 2% Chassis HP into frontline shields</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
-
-    <section id="equipment" class="tab-content">
-      <div class="grid-2">
-        <div class="card">
-          <h2>Smelter Tiers & Red Affix Rules</h2>
-          <table>
-            <thead><tr><th>Tier</th><th>White Lines</th><th>Red Lines</th><th>Ideal Red Rolls</th></tr></thead>
-            <tbody>
-              <tr><td><span class="badge rare">Rare</span></td><td>1</td><td>1</td><td>Gold%, Exp%</td></tr>
-              <tr><td><span class="badge unique">Unique</span></td><td>1</td><td>1</td><td>ATK%, Skill Effect%</td></tr>
-              <tr><td><span class="badge epic">Epic</span></td><td>2</td><td>1</td><td>Skill Effect%, Crit DMG%</td></tr>
-              <tr><td><span class="badge legend">Legend</span></td><td>2</td><td>2</td><td>Dual SE%, Dual BossDMG%, Dual Gold%</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="card">
-          <h2>Arcane Rune Matrix</h2>
-          <table>
-            <thead><tr><th>Rune</th><th>Fixed Base (White)</th><th>Substats (Red)</th><th>Target Role</th></tr></thead>
-            <tbody>
-              <tr><td>Rune of Courage</td><td>HP% +500%</td><td>EXP%, HP%, DEF%</td><td>Frontline Tank / Fortress HP</td></tr>
-              <tr><td>Healing Rune</td><td>REC% +500% x2</td><td>REC%, HP%</td><td>Healers</td></tr>
-              <tr><td>Assault Matrix</td><td>Flat ATK + Weapon ATK%</td><td>Dual ATK%, Crit DMG%</td><td>Hyper-Carries</td></tr>
-              <tr><td>Prosperity Matrix</td><td>Flat DEF + Flat HP</td><td>Dual Gold%, Dual EXP%</td><td>Automated Farming</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
-
-    <section id="merchants" class="tab-content">
       <div class="card">
-        <h2>Wandering Merchant Rotation & Tracker</h2>
-        <table>
-          <thead><tr><th>Merchant</th><th>Location</th><th>Rotation Cadence</th><th>High-Priority Items</th></tr></thead>
-          <tbody>
-            <tr><td><strong>Boran the Peddler</strong></td><td>Stages 10–25</td><td>Every 4 Hours (Lasts 45m)</td><td>Soulstones, Summon Tickets</td></tr>
-            <tr><td><strong>Alchemist Zephyr</strong></td><td>Stages 26–45</td><td>Every 6 Hours (Lasts 60m)</td><td>Engine Oil, Leaf Essence, Fuel</td></tr>
-            <tr><td><strong>Celestial Nomad Stella</strong></td><td>Stages 46+</td><td>Every 8 Hours (Lasts 60m)</td><td>Stardust Vials, Boost Crystals, Blueprints</td></tr>
-          </tbody>
-        </table>
+        <h2>Latest update</h2>
+        <div id="latest-update"></div>
       </div>
     </section>
-
-    <section id="guides" class="tab-content">
-      <div class="card">
-        <h2>Comprehensive Meta Progression Guide</h2>
-        <h3 style="margin-top: 1rem;">Phase 1: Early Aggression (Stages 1–30)</h3>
-        <p style="font-size: 0.9rem; margin-bottom: 0.8rem;">Prioritize direct ATK scaling with gold and constellations (Libra Thorn Blade). Focus on soft-capping Crit Rate at 50%.</p>
-        <h3>Phase 2: Summoner Stall & Multipliers (Stages 30–50)</h3>
-        <p style="font-size: 0.9rem; margin-bottom: 0.8rem;">Switch to Violet for wave blocking and Zelos for invulnerability frames. Saturate carries with Valentine (+200% ATK).</p>
-        <h3>Phase 3: The Fortress HP Pivot (Stage 50+)</h3>
-        <p style="font-size: 0.9rem;">Unlock Scorpii Iron Gate Nebula, equip multi-line HP% Legend Engines, unlock Engine Slot 2 at Augmentation 5, and run Styria (+300% HP).</p>
+    <section>
+      <div class="grid">
+        <a class="card link-card" href="heroes.html"><h3>Hero wiki</h3><p class="muted">Every known hero with sourced skills and passives. Export to CSV.</p></a>
+        <a class="card link-card" href="constellations.html"><h3>Constellation planner</h3><p class="muted">Plan nebula levels, class unlocks and Stardust.</p></a>
+        <a class="card link-card" href="calculators.html"><h3>Damage calculator</h3><p class="muted">The community damage formula, and which stat gives the most damage.</p></a>
+        <a class="card link-card" href="gear.html"><h3>Gear roll checker</h3><p class="muted">See how good a Legend red roll is.</p></a>
+        <a class="card link-card" href="fortress.html"><h3>Fortress</h3><p class="muted">Cannons, kits, facilities, engines and Machina.</p></a>
+        <a class="card link-card" href="guides.html"><h3>Guides and tips</h3><p class="muted">Progression by stage, unlocks, dungeons.</p></a>
       </div>
+    </section>
+    <section class="grid-2">
+      <div class="card"><h2>Quick tips</h2><div id="quick-tips"></div><p class="muted" style="margin-top:0.5rem"><a href="guides.html">More tips</a></p></div>
+      <div class="card"><h2>How to read this site</h2><div id="data-status"></div></div>
     </section>
   </main>
-  <footer><p>Fortress Saga Hub & Toolkit | Maintained by <a href="https://github.com/Mosberg" style="color: var(--primary);">Mosberg</a></p></footer>
-  <script>
-    function switchTab(tabId) {
-      document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
-      document.querySelectorAll('nav button').forEach(el => el.classList.remove('active'));
-      document.getElementById(tabId).classList.add('active');
-      event.target.classList.add('active');
-    }
-    const HEROES = [
-      { id: "jibril", name: "Jibril", rarity: "legend", pos: "Onboard", role: "Dealer", skill: "Savior's Touch: 36 AoE missiles", ex: "Machina Missile (+750% Boss DMG, 2x projectiles)" },
-      { id: "zelos", name: "Zelos", rarity: "legend", pos: "Frontline", role: "Dealer / Tank", skill: "Inevitable Gaze: AoE Fear & Stun", ex: "Devil's Deal (80% lifesteal, invulnerability frames)" },
-      { id: "violet", name: "Violet", rarity: "legend", pos: "Onboard", role: "Summoner / Tank", skill: "Minion Invocations: Frontline summons", ex: "Catalyst (+500% minion HP pool)" },
-      { id: "ravia", name: "Ravia", rarity: "legend", pos: "Frontline", role: "Dealer", skill: "Falling Blossoms: AoE Bleed", ex: "Last Blossom (+500% personal Crit DMG)" },
-      { id: "valentine", name: "Valentine", rarity: "legend", pos: "Onboard", role: "Supporter", skill: "Barren Winds: +200% ATK Aura", ex: "Tactical Array (+150% ATK, +75% Crit DMG)" },
-      { id: "styria", name: "Styria", rarity: "legend", pos: "Onboard", role: "Healer", skill: "Starlight Wind: 40% heal + barrier", ex: "Snowy Protection (+300% allied HP pool)" },
-      { id: "ungula", name: "Ungula", rarity: "legend", pos: "Frontline", role: "Dealer", skill: "Scent of Fear: Stacking ATK Speed", ex: "Primal Claws (Rapid execute scaling on Bosses)" },
-      { id: "ruingaladh", name: "Ruingaladh", rarity: "legend", pos: "Onboard", role: "Buffer", skill: "Roaring Tempest: Airborne + ATK buff", ex: "Terraquake (+100% target vulnerability)" },
-      { id: "stella", name: "Stella", rarity: "epic", pos: "Onboard", role: "Supporter", skill: "Cleansing Sea: Dispel + Shield", ex: "Wave Harp (-20% CD, +30% shielded DMG)" },
-      { id: "louis", name: "Louis", rarity: "rare", pos: "Frontline", role: "Dealer / Utility", skill: "Greatsword: AoE Stun + Team CD cut", ex: "Founder's Blade (Continuous cycle acceleration)" }
-    ];
-    function renderHeroes(list) {
-      document.getElementById('heroGrid').innerHTML = list.map(h => `
-        <div class="card">
-          <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
-            <h3>${h.name}</h3><span class="badge ${h.rarity}">${h.rarity.toUpperCase()}</span>
-          </div>
-          <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.4rem;"><strong>Position:</strong> ${h.pos} | <strong>Role:</strong> ${h.role}</p>
-          <p style="font-size: 0.85rem; margin-bottom: 0.5rem;"><strong>Skill:</strong> ${h.skill}</p>
-          <p style="font-size: 0.85rem; color: var(--accent);"><strong>EX:</strong> ${h.ex}</p>
-        </div>`).join('');
-    }
-    function filterHeroes() {
-      const q = document.getElementById('heroSearch').value.toLowerCase();
-      renderHeroes(HEROES.filter(h => h.name.toLowerCase().includes(q) || h.role.toLowerCase().includes(q) || h.pos.toLowerCase().includes(q)));
-    }
-    const CONSTELLATIONS = [
-      { id: "thorn", name: "Thorn Blade (Hero ATK)", costPerLevel: 4, max: 10, bonus: "+15% ATK/lvl" },
-      { id: "lyre", name: "Lyre (Support ATK)", costPerLevel: 4, max: 10, bonus: "+20% ATK/lvl" },
-      { id: "stepping", name: "Stepping Stone (Onboard ATK)", costPerLevel: 4, max: 10, bonus: "+8% ATK/lvl" },
-      { id: "gunmount", name: "Gun Mount (Cannon ATK)", costPerLevel: 6, max: 10, bonus: "+25% Cannon ATK/lvl" },
-      { id: "sharpshooter", name: "Sharpshooter (ATK Speed)", costPerLevel: 6, max: 10, bonus: "+5% Speed/lvl" },
-      { id: "irongate", name: "Scorpii: Iron Gate (Fortress HP)", costPerLevel: 15, max: 10, bonus: "+75% Chassis HP/lvl" }
-    ];
-    let allocatedStars = { thorn: 5, lyre: 0, stepping: 5, gunmount: 0, sharpshooter: 5, irongate: 5 };
-    function renderConstellations() {
-      document.getElementById('constellationContainer').innerHTML = CONSTELLATIONS.map(c => `
-        <div class="card">
-          <h3>${c.name}</h3>
-          <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.5rem;">${c.bonus}</p>
-          <div style="display: flex; justify-content: space-between; align-items: center;">
-            <label style="font-size: 0.85rem;">Level: <strong>${allocatedStars[c.id]}</strong> / ${c.max}</label>
-            <div>
-              <button onclick="changeConstellation('${c.id}', -1)" style="padding: 0.2rem 0.5rem;">-</button>
-              <button onclick="changeConstellation('${c.id}', 1)" style="padding: 0.2rem 0.5rem;">+</button>
-            </div>
-          </div>
-        </div>`).join('');
-      updateConstellations();
-    }
-    function changeConstellation(id, delta) {
-      const node = CONSTELLATIONS.find(c => c.id === id);
-      const newLvl = allocatedStars[id] + delta;
-      if (newLvl >= 0 && newLvl <= node.max) {
-        allocatedStars[id] = newLvl;
-        renderConstellations();
-      }
-    }
-    function resetConstellations() {
-      Object.keys(allocatedStars).forEach(k => allocatedStars[k] = 0);
-      renderConstellations();
-    }
-    function updateConstellations() {
-      const budget = parseInt(document.getElementById('planStardust').value) || 0;
-      let spent = 0;
-      CONSTELLATIONS.forEach(c => spent += (allocatedStars[c.id] * c.costPerLevel));
-      const rem = budget - spent;
-      const el = document.getElementById('planRemaining');
-      el.innerText = rem;
-      el.style.color = rem < 0 ? 'var(--danger)' : 'var(--primary)';
-    }
-    function runCalculations() {
-      const baseAtk = parseFloat(document.getElementById('calcBaseAtk').value) || 0;
-      const goldAtk = parseFloat(document.getElementById('calcGoldAtk').value) || 0;
-      const bonusAtk = parseFloat(document.getElementById('calcBonusAtk').value) || 0;
-      const skillEffect = parseFloat(document.getElementById('calcSkillEffect').value) || 0;
-      const bossDmg = parseFloat(document.getElementById('calcBossDmg').value) || 0;
-      const valBuff = document.getElementById('calcValBuff').checked ? 2.0 : 0.0;
-      const exBonus = document.getElementById('calcExWeapon').checked ? 7.5 : 0.0;
-
-      const totalAtk = baseAtk * (1 + (goldAtk / 100)) * (1 + ((bonusAtk / 100) + valBuff));
-      const finalSkillDmg = totalAtk * 8.0 * (1 + (skillEffect / 100)) * (1 + (bossDmg / 100) + exBonus);
-      document.getElementById('resHeroDps').innerText = Math.round(finalSkillDmg).toLocaleString();
-
-      const fortBaseHp = parseFloat(document.getElementById('calcFortBaseHp').value) || 0;
-      const engineHp = parseFloat(document.getElementById('calcEngineHp').value) || 0;
-      const ironGate = document.getElementById('calcIronGate').checked ? 4.5 : 0.0;
-      const styriaAura = document.getElementById('calcStyria').checked ? 3.0 : 0.0;
-
-      const fortEhp = fortBaseHp * (1 + (engineHp / 100)) * (1 + ironGate) * (1 + styriaAura);
-      document.getElementById('resFortressEhp').innerText = Math.round(fortEhp).toLocaleString();
-
-      const vEl = document.getElementById('resViability');
-      if (fortEhp > 15000000 && finalSkillDmg > 5000000) {
-        vEl.innerText = "Endgame Capable (Stage 50+)"; vEl.style.color = "var(--rare)";
-      } else if (finalSkillDmg > 2000000) {
-        vEl.innerText = "Midgame Progression (Stages 30–50)"; vEl.style.color = "var(--primary)";
-      } else {
-        vEl.innerText = "Early Phase (Stages 1–30)"; vEl.style.color = "var(--text-muted)";
-      }
-    }
-    window.onload = () => { renderHeroes(HEROES); renderConstellations(); runCalculations(); };
-  </script>
+  <footer id="site-footer"></footer>
+  <script src="assets/js/core.js"></script>
+  <script src="assets/js/merchant-clock.js"></script>
+  <script src="assets/js/pages/home.js"></script>
 </body>
 </html>
