@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wandering merchants | Fortress Saga Hub</title>
+  <meta name="description" content="Fortress Saga wandering merchant timer, daily schedule in your time zone, and slime prices by stage tier.">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+  <header id="site-header"></header>
+  <main>
+    <h1 class="page-title">Wandering merchants</h1>
+    <p class="page-lead">Merchants show up four times a day at fixed UTC times and stay for two hours. Times below are converted to your own clock.</p>
+    <section class="grid-2">
+      <div class="card"><h2>Timer</h2><div id="merchant-clock"></div><p style="margin-top:0.5rem" id="schedule-source"></p></div>
+      <div class="card">
+        <h2>Today's windows</h2>
+        <div class="table-wrap"><table><thead><tr><th>UTC</th><th>Your time</th><th></th></tr></thead><tbody id="windows"></tbody></table></div>
+      </div>
+    </section>
+    <section class="card">
+      <h2>Stock by stage tier</h2>
+      <div class="table-wrap"><table><thead><tr><th>Tier</th><th>Stages</th><th>Featured item</th><th>Price (gems)</th></tr></thead><tbody id="tiers"></tbody></table></div>
+    </section>
+    <section class="grid-2">
+      <div class="card"><h2>What we know</h2><div id="facts"></div></div>
+      <div class="card">
+        <h2>Gem planner</h2>
+        <div class="field"><label for="gems">Gems you have</label><input type="number" id="gems" min="0"></div>
+        <div class="table-wrap"><table><thead><tr><th>Slime</th><th>Price</th><th>You can buy</th><th></th></tr></thead><tbody id="gem-plan"></tbody></table></div>
+      </div>
+    </section>
+  </main>
+  <footer id="site-footer"></footer>
+  <script src="assets/js/core.js"></script>
+  <script src="assets/js/merchant-clock.js"></script>
+  <script src="assets/js/pages/merchants.js"></script>
+</body>
+</html>

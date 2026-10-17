@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sources | Fortress Saga Hub</title>
+  <meta name="description" content="Where the Fortress Saga Hub data comes from and how each value is marked.">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+  <header id="site-header"></header>
+  <main>
+    <h1 class="page-title">Sources</h1>
+    <p class="page-lead" id="checked"></p>
+    <section class="card">
+      <h2>Status marks</h2>
+      <ul class="facts" id="statuses"></ul>
+    </section>
+    <section class="card">
+      <h2>Pages used</h2>
+      <div class="table-wrap"><table><thead><tr><th>Short name</th><th>Page</th><th>Date</th></tr></thead><tbody id="source-list"></tbody></table></div>
+    </section>
+    <section class="grid-2">
+      <div class="card">
+        <h2>Not checked yet</h2>
+        <p>These could not be read automatically. Checking values there, or in game, is how unconfirmed values get settled.</p>
+        <ul style="margin:0.5rem 0 0 1.2rem" id="unreachable"></ul>
+      </div>
+      <div class="card">
+        <h2>Send a correction</h2>
+        <p>Found a wrong number? Open an issue or pull request on <a href="https://github.com/Mosberg/Fortress-Saga">GitHub</a> with a screenshot or a link. All data lives in the <code>data/</code> folder; <code>CONTRIBUTING.md</code> explains the format.</p>
+      </div>
+    </section>
+  </main>
+  <footer id="site-footer"></footer>
+  <script src="assets/js/core.js"></script>
+  <script src="assets/js/pages/sources.js"></script>
+</body>
+</html>

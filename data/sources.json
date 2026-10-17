@@ -1,0 +1,27 @@
+{
+  "checked_on": "2026-10-17",
+  "game_version": "2.1.15",
+  "statuses": {
+    "confirmed": "A public source states the same thing.",
+    "corrected": "The original drafts had this wrong; the value shown is what the source says.",
+    "unconfirmed": "No source we could open mentions it. Treat it as a guess until someone checks it in game."
+  },
+  "sources": [
+    { "id": "appstore", "name": "App Store version notes (CookApps)", "url": "https://apps.apple.com/us/app/fortress-saga-afk-rpg/id6446308106", "date": "v2.1.15, 1 Oct 2026" },
+    { "id": "pg", "name": "PocketGamer tier list", "url": "https://www.pocketgamer.com/fortress-saga/tier-list/", "date": "16 Oct 2026" },
+    { "id": "mm", "name": "MobileMatters tier list", "url": "https://mobilematters.gg/gaming/fortress-saga-character-tier-list", "date": "11 Aug 2026" },
+    { "id": "gt", "name": "gameplay.tips beginner guide", "url": "https://gameplay.tips/guides/fortress-saga-afk-rpg-ultimate-guide-for-beginners.html", "date": "Oct 2024, updated Feb 2026" },
+    { "id": "ld-merchant", "name": "LDPlayer wandering merchant guide", "url": "https://www.ldplayer.net/blog/fortress-saga-wandering-merchant-guide.html", "date": "28 Oct 2025" },
+    { "id": "ld", "name": "LDPlayer tier list", "url": "https://www.ldplayer.net/blog/fortress-saga-tier-list.html", "date": "11 Nov 2025" },
+    { "id": "medievalfun", "name": "medievalfun beginner guide", "url": "https://medievalfun.com/fortress-saga-guide-tips-for-beginners/", "date": "Sep 2023, updated Aug 2025" },
+    { "id": "hp-constellation", "name": "HubPages constellation guide", "url": "https://discover.hubpages.com/games-hobbies/fortress-saga-constellation-guide", "date": "18 Nov 2023" },
+    { "id": "hp-mechanics", "name": "HubPages: mechanics you might have missed", "url": "https://discover.hubpages.com/games-hobbies/fortress-saga-guide-and-tips", "date": "23 Sep 2023" },
+    { "id": "ttp", "name": "TouchTapPlay tier list", "url": "https://www.touchtapplay.com/fortress-saga-tier-list-best-characters-in-the-game/", "date": "Oct 2023" },
+    { "id": "mumu", "name": "MuMu Player hero tier list", "url": "https://www.mumuplayer.com/blog/fortress-saga-heroes-tier-list.html", "date": "8 Oct 2023" },
+    { "id": "cookapps", "name": "Official site (CookApps)", "url": "https://fortress.cookapps.com/en", "date": "undated" }
+  ],
+  "not_reachable": [
+    { "name": "Fan wiki", "url": "https://fortresssagarpg.fandom.com/wiki/Heroes" },
+    { "name": "Official Discord", "url": "https://discord.com/invite/fortresssaga" }
+  ]
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculators | Fortress Saga Hub</title>
+  <meta name="description" content="Fortress Saga damage calculator based on the community formula, with a stat upgrade comparison.">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+  <header id="site-header"></header>
+  <main>
+    <h1 class="page-title">Damage calculator</h1>
+    <p class="page-lead">Enter your numbers from the hero screen. The calculator uses the community damage formula; it is a guide for comparing upgrades, not an exact in-game number.</p>
+    <section class="grid-2">
+      <div class="card">
+        <h2>Your hero</h2>
+        <div class="field"><label for="flatAtk">Flat ATK (sum of all flat ATK)</label><input type="number" id="flatAtk" value="10000"></div>
+        <div class="field"><label for="pctAtk">Sum of all ATK % bonuses</label><input type="number" id="pctAtk" value="300"></div>
+        <div class="field"><label for="multipliers">Separate "x" multipliers, comma separated (for example 1.5, 2)</label><input type="text" id="multipliers" value=""></div>
+        <div class="field"><label for="gildong">Gildong ATK buff % (0 without Gildong)</label><input type="number" id="gildong" value="0"></div>
+        <div class="field"><label for="iris">Iris flat ATK buff (0 without Iris)</label><input type="number" id="iris" value="0"></div>
+        <div class="field"><label for="skill">Skill modifier % (for example 800 for Jibril's Savior's Touch)</label><input type="number" id="skill" value="800"></div>
+        <div class="field"><label for="critDmg">Crit DMG % (as shown, for example 250)</label><input type="number" id="critDmg" value="250"></div>
+        <div class="field"><label for="critChance">Crit chance % (maximum 50)</label><input type="number" id="critChance" value="50" min="0" max="100"></div>
+        <div class="field"><label for="bossDmg">Boss DMG %</label><input type="number" id="bossDmg" value="100"></div>
+        <label class="check"><input type="checkbox" id="ruingaladh"> Ruingaladh's Nature's Mark on the target (x2)</label>
+      </div>
+      <div class="card">
+        <h2>Result</h2>
+        <div id="results"></div>
+        <h3 style="margin-top:1rem">Which upgrade helps most?</h3>
+        <div class="table-wrap"><table><thead><tr><th>Upgrade</th><th>Average damage gain</th></tr></thead><tbody id="compare"></tbody></table></div>
+        <p class="muted" style="margin-top:0.5rem">The average weighs crit and non-crit hits by your crit chance; that weighting is this site's own step, not part of the source formula.</p>
+      </div>
+    </section>
+    <section class="grid-2">
+      <div class="card"><h2>The formula</h2><div id="formula"></div></div>
+      <div class="card"><h2>Stat caps</h2><div id="caps"></div></div>
+    </section>
+    <section class="card"><h2>Not used: draft-only numbers</h2><div id="draft-only"></div></section>
+  </main>
+  <footer id="site-footer"></footer>
+  <script src="assets/js/core.js"></script>
+  <script src="assets/js/pages/calculators.js"></script>
+</body>
+</html>

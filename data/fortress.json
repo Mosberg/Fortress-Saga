@@ -1,0 +1,33 @@
+{
+  "cannons": [
+    { "name": "Burst Cannon", "role": "Highest attack speed; the farming pick.", "status": "confirmed", "sources": ["gt"] },
+    { "name": "Freeze Cannon", "role": "Freezes bosses, but X-20 bosses are immune.", "status": "corrected", "sources": ["gt"], "note": "The drafts said it locks down stage bosses without the X-20 exception." },
+    { "name": "Knockback Cannon", "role": "Pushes waves back from the fortress.", "status": "confirmed", "sources": ["gt"] }
+  ],
+  "kits": [
+    { "name": "Dangerous Wrench Kit", "role": "Extra fortress attack speed and damage.", "status": "confirmed", "sources": ["gt"], "note": "The drafts' 1.5% HP drain per second is unconfirmed." },
+    { "name": "Red Barrier Kit", "role": "Needed past stage 50, together with Zelos and his exclusive weapon.", "status": "confirmed", "sources": ["gt"] },
+    { "name": "Squeak Droid", "role": "Used for Merfolk's Ambush farming. Its effect (drafts: 40% DEF shred) is unconfirmed.", "status": "unconfirmed", "sources": ["gt"] }
+  ],
+  "facilities": [
+    { "name": "Kitchen", "role": "Turns basic food into higher-grade food for hero levels.", "status": "confirmed", "sources": ["gt"] },
+    { "name": "Sauna", "role": "Gives passive XP to heroes placed inside.", "status": "corrected", "sources": ["gt"], "note": "The drafts said it fills a fortress rank EXP pool." },
+    { "name": "Gear Factory", "role": "Cannon equipment and Barrage Crystals for Augmentation.", "status": "confirmed", "sources": ["gt"] },
+    { "name": "Canning Factory", "role": "Cat food and Defense Crystals.", "status": "confirmed", "sources": ["gt"] },
+    { "name": "Smelter", "role": "Turns ores into weapons and trinkets.", "status": "confirmed", "sources": ["gt"] },
+    { "name": "Arcane Workshop", "role": "Potentials, equipment rerolls and World Leaf materials.", "status": "confirmed", "sources": ["gt"] },
+    { "name": "Engine Room", "role": "Makes Fuel, Engine Oil and engines.", "status": "confirmed", "sources": ["gt"] }
+  ],
+  "facility_notes": [
+    { "text": "Hero level affects how fast heroes work in facilities.", "status": "confirmed", "sources": ["gt"] },
+    { "text": "4 worker slots per facility and rarity speed multipliers of 1.15-1.75.", "status": "unconfirmed", "sources": [] }
+  ],
+  "engines": [
+    { "text": "Engines are made in the Engine Room from Fuel and Engine Oil.", "status": "confirmed", "sources": ["gt"] },
+    { "text": "8 engine slots, slot 2 at Augmentation 5, and the other slot gates.", "status": "unconfirmed", "sources": [] }
+  ],
+  "machina": [
+    { "text": "Machina Engineering unlocks after stage 50-20. Blueprints craft Precision Parts.", "status": "confirmed", "sources": ["appstore"] },
+    { "text": "A 4x4 grid, a 1.25x connector bonus, and the part types and values.", "status": "unconfirmed", "sources": [] }
+  ]
+}
