@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "version": "2.4.0",
+  "engine_metadata": {
+    "game_title": "Fortress Saga: AFK RPG",
+    "architecture_type": "Dual-Engine Idle Simulation",
+    "max_offline_progression_minutes": 1440,
+    "tick_rate_hz": 30
+  },
+  "damage_pipeline": {
+    "execution_order": [
+      "calculate_base_attack",
+      "apply_gold_and_level_multipliers",
+      "apply_possession_layer",
+      "apply_passive_auras",
+      "apply_skill_effect_scalar",
+      "evaluate_critical_strike",
+      "apply_boss_or_enemy_multipliers",
+      "calculate_target_damage_mitigation",
+      "apply_final_vulnerability_and_executes"
+    ],
+    "formulas": {
+      "total_hero_attack": "((base_stat + sum(flat_equipment_stats)) * (1 + sum(gold_enhancement_pct))) * prod(1 + hero_possession_pct) * (1 + sum(constellation_pct) + sum(gear_red_substat_pct))",
+      "skill_damage_output": "total_hero_attack * (base_skill_multiplier_pct + (skill_level * skill_growth_factor)) * (1 + skill_effect_pct)",
+      "critical_damage": "base_damage * (base_crit_damage_multiplier + gear_crit_damage_pct + ex_weapon_crit_bonus_pct)",
+      "damage_mitigation": "incoming_damage * (1 - (target_defense / (target_defense + 5000 + (attacker_level * 150))))",
+      "fortress_effective_hp": "(base_chassis_hp + sum(engine_flat_hp)) * (1 + sum(engine_percent_hp)) * (1 + iron_gate_constellation_pct) * (1 + styria_passive_hp_pct)"
+    },
+    "stat_caps_and_softcaps": {
+      "critical_hit_chance_pct": {
+        "softcap": 50.0,
+        "hardcap": 100.0,
+        "notes": "Diminishing returns past softcap via flat stat allocation."
+      },
+      "damage_reduction_pct": {
+        "hardcap": 85.0,
+        "notes": "True immunities bypass standard damage checks."
+      },
+      "fortress_attack_speed_hz": {
+        "base": 1.0,
+        "hardcap": 10.0
+      }
+    }
+  },
+  "runtime_configs": {
+    "idle_dispatch": {
+      "gold_tick_seconds": 5,
+      "base_kpm_target": 120,
+      "exp_curve_exponent": 1.62
+    },
+    "ai_targeting_heuristics": [
+      {
+        "id": "lowest_absolute_hp",
+        "used_by": [
+          "Howling"
+        ]
+      },
+      {
+        "id": "rearmost_enemy",
+        "used_by": [
+          "Ivy"
+        ]
+      },
+      {
+        "id": "boss_priority",
+        "used_by": [
+          "Burst Cannon",
+          "Jibril"
+        ]
+      },
+      {
+        "id": "frontline_swarming",
+        "used_by": [
+          "Minions",
+          "Zelos"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+[
+  {
+    "name": "Boran the Peddler",
+    "location": "Stages 10-25",
+    "rotation": "Every 4 Hours (Lasts 45m)",
+    "items": [
+      "Soulstones",
+      "Discounted Summon Tickets"
+    ]
+  },
+  {
+    "name": "Alchemist Zephyr",
+    "location": "Stages 26-45",
+    "rotation": "Every 6 Hours (Lasts 60m)",
+    "items": [
+      "Engine Oil",
+      "World Leaf Essence",
+      "Refined Fuel"
+    ]
+  },
+  {
+    "name": "Celestial Nomad Stella",
+    "location": "Stages 46+",
+    "rotation": "Every 8 Hours (Lasts 60m)",
+    "items": [
+      "Stardust Vials",
+      "Boost Crystals",
+      "Machina Blueprints"
+    ]
+  }
+]

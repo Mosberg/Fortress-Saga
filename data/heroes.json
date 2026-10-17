@@ -1,0 +1,232 @@
+[
+  {
+    "id": "jibril",
+    "name": "Jibril",
+    "rarity": "Legend",
+    "position": "Onboard",
+    "role": "Dealer",
+    "base_parameters": {
+      "base_atk": 4850,
+      "atk_growth": 142.5,
+      "base_hp": 24200,
+      "hp_growth": 680.0,
+      "base_def": 1200
+    },
+    "active_skill": {
+      "name": "Savior's Touch",
+      "description": "Fires 36 rapid artillery strikes dealing AoE damage across randomized targets.",
+      "damage_multiplier": "(800 + X)%"
+    },
+    "exclusive_weapon": {
+      "name": "Machina Missile",
+      "passive_effect": "Doubles skill radius and strike count; adds +750% Boss Damage scalar."
+    }
+  },
+  {
+    "id": "zelos",
+    "name": "Zelos",
+    "rarity": "Legend",
+    "position": "Frontline",
+    "role": "Dealer / Tank",
+    "base_parameters": {
+      "base_atk": 3650,
+      "atk_growth": 115.0,
+      "base_hp": 48000,
+      "hp_growth": 1450.0,
+      "base_def": 2800
+    },
+    "active_skill": {
+      "name": "Inevitable Gaze",
+      "description": "Deals AoE damage; inflicts 4s Fear to standard mobs and 4s Stun to Stage Bosses.",
+      "damage_multiplier": "(200 + X)%"
+    },
+    "exclusive_weapon": {
+      "name": "Devil's Deal",
+      "passive_effect": "Converts 66.6% to 80% damage dealt to HP; grants +750% Boss DMG and invulnerability frames."
+    }
+  },
+  {
+    "id": "violet",
+    "name": "Violet",
+    "rarity": "Legend",
+    "position": "Onboard",
+    "role": "Summoner / Tank",
+    "base_parameters": {
+      "base_atk": 2900,
+      "atk_growth": 95.0,
+      "base_hp": 31000,
+      "hp_growth": 920.0,
+      "base_def": 1800
+    },
+    "active_skill": {
+      "name": "Minion Invocations",
+      "description": "Deploys frontline constructs that absorb lethal strikes.",
+      "damage_multiplier": null
+    },
+    "exclusive_weapon": {
+      "name": "Exclusive Catalyst",
+      "passive_effect": "Significantly scales minion baseline HP pool."
+    }
+  },
+  {
+    "id": "ravia",
+    "name": "Ravia",
+    "rarity": "Legend",
+    "position": "Frontline",
+    "role": "Dealer",
+    "base_parameters": {
+      "base_atk": 4100,
+      "atk_growth": 128.0,
+      "base_hp": 36000,
+      "hp_growth": 1050.0,
+      "base_def": 1900
+    },
+    "active_skill": {
+      "name": "Falling Blossoms",
+      "description": "Inflicts AoE damage and applies a lingering 5s Bleed.",
+      "damage_multiplier": "(240 + X)%"
+    },
+    "exclusive_weapon": {
+      "name": "Last Blossom",
+      "passive_effect": "Permanently escalates personal Critical Damage by +500%."
+    }
+  },
+  {
+    "id": "styria",
+    "name": "Styria (Staria)",
+    "rarity": "Legend",
+    "position": "Onboard",
+    "role": "Healer",
+    "base_parameters": {
+      "base_atk": 2100,
+      "atk_growth": 65.0,
+      "base_hp": 34000,
+      "hp_growth": 990.0,
+      "base_def": 2100
+    },
+    "active_skill": {
+      "name": "Starlight Wind",
+      "description": "Restores 40% Max HP to allies and grants a barrier equal to (50 + X)% HP for 3s.",
+      "damage_multiplier": null
+    },
+    "exclusive_weapon": {
+      "name": "Snowy Protection",
+      "passive_effect": "Permanently increases allied heroes' Max HP by +300% during battle encounters."
+    }
+  },
+  {
+    "id": "valentine",
+    "name": "Valentine",
+    "rarity": "Legend",
+    "position": "Onboard",
+    "role": "Supporter / Buffer",
+    "base_parameters": {
+      "base_atk": 2400,
+      "atk_growth": 78.0,
+      "base_hp": 28000,
+      "hp_growth": 810.0,
+      "base_def": 1500
+    },
+    "active_skill": {
+      "name": "Barren Winds",
+      "description": "Grants +200% ATK to all deployed allied heroes while stationed aboard.",
+      "damage_multiplier": null
+    },
+    "exclusive_weapon": {
+      "name": "Tactical Array",
+      "passive_effect": "Adds +150% ATK and +75% allied Crit DMG."
+    }
+  },
+  {
+    "id": "ungula",
+    "name": "Ungula",
+    "rarity": "Legend",
+    "position": "Frontline",
+    "role": "Dealer",
+    "base_parameters": {
+      "base_atk": 4300,
+      "atk_growth": 135.0,
+      "base_hp": 38000,
+      "hp_growth": 1120.0,
+      "base_def": 2000
+    },
+    "active_skill": {
+      "name": "Scent of Fear",
+      "description": "Passive ramps Attack Speed, Move Speed, and CD Recovery by 10% every 2 hits (up to +200%).",
+      "damage_multiplier": null
+    },
+    "exclusive_weapon": {
+      "name": "Primal Claws",
+      "passive_effect": "Converts passive stack generation into massive execute scaling on bosses."
+    }
+  },
+  {
+    "id": "ruingaladh",
+    "name": "Ruingaladh",
+    "rarity": "Legend",
+    "position": "Onboard",
+    "role": "Buffer / Dealer",
+    "base_parameters": {
+      "base_atk": 3800,
+      "atk_growth": 110.0,
+      "base_hp": 29000,
+      "hp_growth": 850.0,
+      "base_def": 1600
+    },
+    "active_skill": {
+      "name": "Roaring Tempest",
+      "description": "Frontal cyclone dealing 260% ATK, knocking targets airborne and buffing allied ATK by (30 + X)% for 5s.",
+      "damage_multiplier": "260%"
+    },
+    "exclusive_weapon": {
+      "name": "Terraquake Wrath",
+      "passive_effect": "Generates a secondary tremor that inflicts an active +100% vulnerability debuff."
+    }
+  },
+  {
+    "id": "stella",
+    "name": "Stella",
+    "rarity": "Epic",
+    "position": "Onboard",
+    "role": "Supporter",
+    "base_parameters": {
+      "base_atk": 1800,
+      "atk_growth": 55.0,
+      "base_hp": 22000,
+      "hp_growth": 650.0,
+      "base_def": 1300
+    },
+    "active_skill": {
+      "name": "Cleansing Sea",
+      "description": "Dispels debuffs from all allies and grants a protective shield.",
+      "damage_multiplier": null
+    },
+    "exclusive_weapon": {
+      "name": "Wave Harp",
+      "passive_effect": "Compresses CD by 20%, adds a 50% heal, and boosts shielded allies' DMG by +30%."
+    }
+  },
+  {
+    "id": "louis",
+    "name": "Louis",
+    "rarity": "Rare",
+    "position": "Frontline",
+    "role": "Dealer / Utility",
+    "base_parameters": {
+      "base_atk": 1500,
+      "atk_growth": 45.0,
+      "base_hp": 19000,
+      "hp_growth": 520.0,
+      "base_def": 1100
+    },
+    "active_skill": {
+      "name": "Greatsword of Freedom",
+      "description": "Swings for (160 + X)% ATK, dealing 3s Stun; passive reduces team skill cooldowns.",
+      "damage_multiplier": "(160 + X)%"
+    },
+    "exclusive_weapon": {
+      "name": "Founder's Blade",
+      "passive_effect": "Accelerates team-wide active cycling, enabling continuous control locks."
+    }
+  }
+]
