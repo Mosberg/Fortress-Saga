@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FortressSagaUnifiedDatabaseSchema",
+  "type": "object",
+  "required": [
+    "core_formulas",
+    "heroes",
+    "equipment",
+    "constellations"
+  ],
+  "properties": {
+    "core_formulas": {
+      "type": "object"
+    },
+    "heroes": {
+      "type": "array"
+    },
+    "equipment": {
+      "type": "object"
+    },
+    "constellations": {
+      "type": "object"
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "system_mechanics": {
+    "unlock_stage": "5-10",
+    "respec_cost": 0,
+    "respec_penalty_pct": 0.0
+  },
+  "classes": [
+    {
+      "class_name": "Libra",
+      "unlock_cost_stars": 0,
+      "nebulae": [
+        {
+          "id": "thorn_blade",
+          "name": "Thorn Blade Nebula",
+          "effects": "Increases flat and percentage Hero Attack (+15%/lvl)."
+        },
+        {
+          "id": "lyre",
+          "name": "Lyre Nebula",
+          "effects": "+20% ATK per level for Supporter-class units."
+        },
+        {
+          "id": "stepping_stone",
+          "name": "Stepping Stone Nebula",
+          "effects": "Up to +80% ATK scaling for Onboard heroes."
+        }
+      ]
+    },
+    {
+      "class_name": "Leonis",
+      "unlock_cost_stars": 15,
+      "nebulae": [
+        {
+          "id": "gun_mount",
+          "name": "Gun Mount Nebula",
+          "effects": "Escalates base Fortress Cannon damage (+25%/lvl)."
+        },
+        {
+          "id": "sharpshooter",
+          "name": "Sharpshooter Nebula",
+          "effects": "Escalates Fortress Attack Speed directly (+5%/lvl)."
+        },
+        {
+          "id": "platinum",
+          "name": "Platinum Nebula",
+          "effects": "Increases stage Gold drop multipliers (+12%/lvl)."
+        },
+        {
+          "id": "wisdom",
+          "name": "Wisdom Nebula",
+          "effects": "Increases battle EXP acquisition rate (+12%/lvl)."
+        }
+      ]
+    },
+    {
+      "class_name": "Scorpii",
+      "unlock_cost_stars": 120,
+      "nebulae": [
+        {
+          "id": "iron_gate",
+          "name": "Iron Gate Nebula",
+          "effects": "Massive multipliers to Fortress Max HP (+75%/lvl, core of late-game HP build)."
+        },
+        {
+          "id": "starfire_ii",
+          "name": "Starfire II Nebula",
+          "effects": "Dedicated ranged artillery damage amplification."
+        }
+      ]
+    }
+  ]
+}

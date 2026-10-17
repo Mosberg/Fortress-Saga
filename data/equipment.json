@@ -1,0 +1,84 @@
+{
+  "smelter_tiers": [
+    {
+      "tier": "Rare",
+      "white_lines": 1,
+      "red_lines": 1,
+      "ideal_rolls": [
+        "Gold%",
+        "Exp%"
+      ]
+    },
+    {
+      "tier": "Unique",
+      "white_lines": 1,
+      "red_lines": 1,
+      "ideal_rolls": [
+        "ATK%",
+        "Skill Effect%"
+      ]
+    },
+    {
+      "tier": "Epic",
+      "white_lines": 2,
+      "red_lines": 1,
+      "ideal_rolls": [
+        "Skill Effect%",
+        "Crit DMG%"
+      ]
+    },
+    {
+      "tier": "Legend",
+      "white_lines": 2,
+      "red_lines": 2,
+      "ideal_rolls": [
+        "Dual SE%",
+        "Dual BossDMG%",
+        "Dual Gold%"
+      ]
+    }
+  ],
+  "runes": [
+    {
+      "id": "courage",
+      "name": "Rune of Courage",
+      "tier": "Epic",
+      "fixed_white": "HP% +500%",
+      "variable_red": [
+        "EXP%",
+        "HP%",
+        "DEF%"
+      ]
+    },
+    {
+      "id": "healing",
+      "name": "Healing Rune",
+      "tier": "Epic",
+      "fixed_white": "REC% +500% x2",
+      "variable_red": [
+        "REC%",
+        "HP%"
+      ]
+    },
+    {
+      "id": "assault",
+      "name": "Assault Matrix",
+      "tier": "Legend",
+      "fixed_white": "Flat ATK + Weapon ATK%",
+      "variable_red": [
+        "Dual ATK%",
+        "Crit DMG%"
+      ]
+    },
+    {
+      "id": "prosperity",
+      "name": "Prosperity Matrix",
+      "tier": "Legend",
+      "fixed_white": "Flat DEF + Flat HP",
+      "variable_red": [
+        "Dual Gold%",
+        "Dual EXP%"
+      ]
+    }
+  ]
+}
