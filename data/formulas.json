@@ -1,0 +1,44 @@
+{
+  "damage": {
+    "name": "Community damage formula",
+    "status": "confirmed",
+    "sources": [
+      "gt"
+    ],
+    "formula": "DMG = (ATK x (Gildong buff + 100%) + Iris buff) x Skill modifier x Crit DMG x (Boss DMG + 100%)",
+    "notes": [
+      "With Ruingaladh in the team, his Nature's Mark (+100% damage taken) doubles the result.",
+      "Base power (ATK) is the sum of flat ATK, times (sum of all % values + 100%), times the product of all \"x\" multipliers.",
+      "Skill Effect does not apply to passives or summons.",
+      "This is a community formula, not one published by the developer."
+    ]
+  },
+  "caps": [
+    {
+      "text": "Crit chance maxes at 50%.",
+      "status": "corrected",
+      "sources": [
+        "gt"
+      ],
+      "note": "The drafts called 50% a soft cap with a 100% hard cap."
+    },
+    {
+      "text": "Damage reduction hard cap of 85%.",
+      "status": "unconfirmed",
+      "sources": []
+    }
+  ],
+  "draft_only": {
+    "status": "unconfirmed",
+    "sources": [],
+    "note": "The original drafts contained an \"engine\" block with these values. No source mentions any of them and they look invented, so the hub does not use them.",
+    "items": [
+      "Mitigation = DEF / (DEF + 5000 + attacker level x 150)",
+      "Fortress attack speed base 1.0 Hz, cap 10 Hz; cannon cadences 2.5 / 0.8 / 0.5 Hz",
+      "Tick rate 30 Hz, gold tick 5 s, KPM target 120, EXP curve exponent 1.62",
+      "Offline progress cap of 1,440 minutes",
+      "A nine-step damage pipeline order",
+      "Hero base stats and growth values (for example Jibril base ATK 4850)"
+    ]
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mosberg.github.io/Fortress-Saga/schemas/common.schema.json",
+  "title": "Shared definitions",
+  "$defs": {
+    "status": {
+      "enum": [
+        "confirmed",
+        "corrected",
+        "unconfirmed"
+      ]
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "fact": {
+      "type": "object",
+      "required": [
+        "text",
+        "status",
+        "sources"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "text": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        },
+        "sources": {
+          "$ref": "#/$defs/sources"
+        },
+        "note": {
+          "type": "string"
+        }
+      }
+    },
+    "facts": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/fact"
+      }
+    },
+    "rarity": {
+      "enum": [
+        "Rare",
+        "Unique",
+        "Epic",
+        "Legend",
+        null
+      ]
+    },
+    "sourced": {
+      "type": "object",
+      "required": [
+        "status",
+        "sources"
+      ],
+      "properties": {
+        "status": {
+          "$ref": "#/$defs/status"
+        },
+        "sources": {
+          "$ref": "#/$defs/sources"
+        }
+      }
+    }
+  }
+}

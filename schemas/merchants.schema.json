@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mosberg.github.io/Fortress-Saga/schemas/merchants.schema.json",
+  "title": "Wandering merchants",
+  "type": "object",
+  "required": [
+    "schedule",
+    "facts",
+    "tiers"
+  ],
+  "properties": {
+    "schedule": {
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/$defs/sourced"
+        }
+      ],
+      "required": [
+        "spawn_hours_utc",
+        "duration_minutes"
+      ],
+      "properties": {
+        "spawn_hours_utc": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 23
+          }
+        },
+        "duration_minutes": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "facts": {
+      "$ref": "common.schema.json#/$defs/facts"
+    },
+    "tiers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "tier",
+          "stages",
+          "item",
+          "price_gems"
+        ],
+        "properties": {
+          "tier": {
+            "type": "integer"
+          },
+          "stages": {
+            "type": "string"
+          },
+          "item": {
+            "type": "string"
+          },
+          "price_gems": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 0
+          }
+        }
+      }
+    }
+  }
+}

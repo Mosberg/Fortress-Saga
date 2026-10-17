@@ -1,0 +1,120 @@
+{
+  "facts": [
+    {
+      "text": "Equipment has one white and one red base stat.",
+      "status": "corrected",
+      "sources": [
+        "gt"
+      ],
+      "note": "The drafts applied the rune line counts to equipment."
+    },
+    {
+      "text": "From Smelter level 4, purple crafts can come out Legend.",
+      "status": "corrected",
+      "sources": [
+        "gt"
+      ],
+      "note": "The drafts said Legend crafts start at Smelter level 6."
+    },
+    {
+      "text": "Upgrade caps of 50/100/150/200 and a reroll cost of 10 World Leaf Essence per slot.",
+      "status": "unconfirmed",
+      "sources": []
+    }
+  ],
+  "rune_lines": {
+    "status": "confirmed",
+    "sources": [
+      "gt"
+    ],
+    "tiers": [
+      {
+        "tier": "Rare",
+        "white": 1,
+        "red": 1
+      },
+      {
+        "tier": "Unique",
+        "white": 1,
+        "red": 1
+      },
+      {
+        "tier": "Epic",
+        "white": 2,
+        "red": 1
+      },
+      {
+        "tier": "Legend",
+        "white": 2,
+        "red": 2
+      }
+    ]
+  },
+  "legend_red_rolls": {
+    "applies_to": "Legend weapons and trinkets",
+    "status": "corrected",
+    "sources": [
+      "gt"
+    ],
+    "note": "The drafts' ranges (for example ATK 100-300%) were wrong.",
+    "rolls": [
+      {
+        "stat": "ATK %",
+        "min": 80,
+        "max": 150
+      },
+      {
+        "stat": "Skill Effect %",
+        "min": 120,
+        "max": 180
+      },
+      {
+        "stat": "Crit DMG %",
+        "min": 150,
+        "max": 200
+      },
+      {
+        "stat": "Boss DMG %",
+        "min": 90,
+        "max": 150
+      },
+      {
+        "stat": "HP / DEF / REC %",
+        "min": 400,
+        "max": 600
+      },
+      {
+        "stat": "Gold / EXP %",
+        "min": 10,
+        "max": 20
+      }
+    ]
+  },
+  "stat_priority": {
+    "status": "confirmed",
+    "sources": [
+      "gt"
+    ],
+    "bossing": [
+      "ATK",
+      "Skill Effect / Boss DMG",
+      "Crit DMG"
+    ],
+    "farming": [
+      "Gold",
+      "EXP"
+    ],
+    "potentials": "Take Skill Effect % and Boss DMG %; ignore ATK % on potentials."
+  },
+  "draft_runes": {
+    "status": "unconfirmed",
+    "sources": [],
+    "note": "These rune names and stats come only from the original drafts.",
+    "items": [
+      "Rune of Courage",
+      "Healing Rune",
+      "Assault Matrix",
+      "Prosperity Matrix"
+    ]
+  }
+}
