@@ -1,0 +1,130 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mosberg.github.io/Fortress-Saga/schemas/constellations.schema.json",
+  "title": "Constellations",
+  "type": "object",
+  "required": [
+    "mechanics",
+    "classes",
+    "other_nebulae"
+  ],
+  "properties": {
+    "mechanics": {
+      "$ref": "common.schema.json#/$defs/facts"
+    },
+    "classes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "unlock_levels",
+          "nebulae"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "unlock_levels": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "nebulae": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "name",
+                "effect",
+                "per_level",
+                "max_level",
+                "cost_schedule",
+                "status",
+                "sources"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "effect": {
+                  "type": "string"
+                },
+                "per_level": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "max_level": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ],
+                  "minimum": 1
+                },
+                "cost_schedule": {
+                  "type": [
+                    "array",
+                    "null"
+                  ],
+                  "items": {
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                },
+                "status": {
+                  "$ref": "common.schema.json#/$defs/status"
+                },
+                "sources": {
+                  "$ref": "common.schema.json#/$defs/sources"
+                },
+                "note": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "other_nebulae": {
+      "type": "object",
+      "required": [
+        "note",
+        "sources",
+        "items"
+      ],
+      "properties": {
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "name",
+              "effect"
+            ],
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "effect": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,31 +1,23 @@
-[
-  {
-    "name": "Boran the Peddler",
-    "location": "Stages 10-25",
-    "rotation": "Every 4 Hours (Lasts 45m)",
-    "items": [
-      "Soulstones",
-      "Discounted Summon Tickets"
-    ]
+{
+  "schedule": {
+    "spawn_hours_utc": [3, 9, 15, 21],
+    "duration_minutes": 120,
+    "status": "confirmed",
+    "sources": ["gt", "ld-merchant"]
   },
-  {
-    "name": "Alchemist Zephyr",
-    "location": "Stages 26-45",
-    "rotation": "Every 6 Hours (Lasts 60m)",
-    "items": [
-      "Engine Oil",
-      "World Leaf Essence",
-      "Refined Fuel"
-    ]
-  },
-  {
-    "name": "Celestial Nomad Stella",
-    "location": "Stages 46+",
-    "rotation": "Every 8 Hours (Lasts 60m)",
-    "items": [
-      "Stardust Vials",
-      "Boost Crystals",
-      "Machina Blueprints"
-    ]
-  }
-]
+  "facts": [
+    { "text": "Merchants appear on set stages, grouped into tiers by stage range. A compass icon next to the stage number shows whether one is active.", "status": "confirmed", "sources": ["gt", "ld-merchant"] },
+    { "text": "They sell slime heroes for gems, plus lucky tickets, equipment, keys and arena tickets.", "status": "confirmed", "sources": ["gt", "ld-merchant"] },
+    { "text": "Only Gandalfu Slime and Queen Slime give an ATK multiplier.", "status": "confirmed", "sources": ["gt"] },
+    { "text": "Lucky tickets cost 500-1,000 gems and items are free 10-20% of the time.", "status": "unconfirmed", "sources": ["ld-merchant"] },
+    { "text": "The named merchants in the original drafts (Boran the Peddler, Alchemist Zephyr, Celestial Nomad Stella) and their 4/6/8 hour cadences do not exist.", "status": "corrected", "sources": ["gt", "ld-merchant"] }
+  ],
+  "tiers": [
+    { "tier": 1, "stages": "1-4", "item": "Libo Slime", "price_gems": 1000 },
+    { "tier": 2, "stages": "5-8", "item": "Gandalfu Slime", "price_gems": 2000 },
+    { "tier": 3, "stages": "9-12", "item": "Wagzak Slime", "price_gems": 4000 },
+    { "tier": 4, "stages": "13-16", "item": "King Slime", "price_gems": 15000 },
+    { "tier": 5, "stages": "17-20", "item": "Queen Slime", "price_gems": 20000 },
+    { "tier": 6, "stages": "21-24", "item": "Slime Essences, Legendary Slime Essence", "price_gems": null }
+  ]
+}

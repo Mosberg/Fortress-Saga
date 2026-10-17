@@ -1,0 +1,55 @@
+{
+  "unlocks": [
+    { "stage": "2-10", "feature": "Repair Cat", "status": "confirmed", "sources": ["gt"] },
+    { "stage": "2-11", "feature": "Merfolk's Ambush", "status": "confirmed", "sources": ["gt"] },
+    { "stage": "3-3", "feature": "Fortress skins", "status": "confirmed", "sources": ["gt"] },
+    { "stage": "5-10", "feature": "Constellations", "status": "confirmed", "sources": ["gt", "medievalfun"] },
+    { "stage": "50-20", "feature": "Machina Engineering", "status": "confirmed", "sources": ["appstore"] }
+  ],
+  "dungeons": {
+    "status": "confirmed",
+    "sources": ["gt"],
+    "items": ["Endless Railroad", "Sketchy", "Merfolk's Ambush", "Orichalcon Mines"]
+  },
+  "tips": [
+    { "topic": "Potentials", "text": "Roll for Skill Effect % and Boss DMG %. ATK % is not worth it on potentials.", "status": "confirmed", "sources": ["gt"] },
+    { "topic": "Skill Effect", "text": "Skill Effect does not boost passives or summons, so it is wasted on summoners like Violet.", "status": "confirmed", "sources": ["gt"] },
+    { "topic": "Crit", "text": "Crit chance maxes at 50%. Stop investing in it once you reach that and move to Crit DMG.", "status": "confirmed", "sources": ["gt"] },
+    { "topic": "Offline", "text": "Offline rewards are small; you progress much faster farming while online.", "status": "confirmed", "sources": ["gt"] },
+    { "topic": "Constellations", "text": "Resets are free, so keep a boss setup and a farming setup (Wisdom and Platinum) and switch as needed.", "status": "confirmed", "sources": ["gt", "hp-constellation"] },
+    { "topic": "Stardust", "text": "Convert surplus Unique, Epic and Legend heroes into Stardust, and push Fortress Expansion tiers for 30 Stardust each.", "status": "confirmed", "sources": ["gt", "medievalfun"] },
+    { "topic": "Gear stats", "text": "For bosses take ATK first, then Skill Effect and Boss DMG, then Crit DMG. For farming take Gold, then EXP.", "status": "confirmed", "sources": ["gt"] },
+    { "topic": "Cannons", "text": "Burst Cannon for farming. Freeze Cannon does nothing against X-20 bosses.", "status": "confirmed", "sources": ["gt"] },
+    { "topic": "Merchants", "text": "Check the compass icon by the stage number at 03, 09, 15 and 21 UTC. Gandalfu and Queen Slime are the ones with an ATK multiplier.", "status": "confirmed", "sources": ["gt", "ld-merchant"] },
+    { "topic": "Stage 50+", "text": "Past stage 50 you need the Red Barrier Kit and Zelos with his exclusive weapon.", "status": "confirmed", "sources": ["gt"] }
+  ],
+  "phases": [
+    {
+      "name": "Early game", "stages": "1-30",
+      "steps": [
+        { "text": "Get Repair Cat (2-10) and start Merfolk's Ambush (2-11).", "status": "confirmed", "sources": ["gt"] },
+        { "text": "Open constellations at 5-10 and level Libra (Thorn Blade, Stepping Stone for onboard heroes).", "status": "confirmed", "sources": ["gt", "hp-constellation"] },
+        { "text": "Build crit chance up to the 50% maximum.", "status": "confirmed", "sources": ["gt"] },
+        { "text": "Farm actively instead of relying on offline rewards.", "status": "confirmed", "sources": ["gt"] }
+      ]
+    },
+    {
+      "name": "Mid game", "stages": "30-50",
+      "steps": [
+        { "text": "Invest 15 nebula levels to open Leonis and 30 to open Aquaril (Gold Knife for Legend heroes).", "status": "confirmed", "sources": ["hp-constellation"] },
+        { "text": "Reroll potentials toward Skill Effect % and Boss DMG %.", "status": "confirmed", "sources": ["gt"] },
+        { "text": "Check gear rolls against the Legend ranges on the Gear page before upgrading.", "status": "confirmed", "sources": ["gt"] },
+        { "text": "Pair a buffer (Gildong or Ruingaladh) with your main dealer; both are multipliers in the damage formula.", "status": "confirmed", "sources": ["gt"] }
+      ]
+    },
+    {
+      "name": "Late game", "stages": "50+",
+      "steps": [
+        { "text": "Equip the Red Barrier Kit and run Zelos with his exclusive weapon.", "status": "confirmed", "sources": ["gt"] },
+        { "text": "Machina Engineering opens after 50-20; craft Precision Parts from Blueprints.", "status": "confirmed", "sources": ["appstore"] },
+        { "text": "Scorpii (120 levels) brings Iron Gate for Fortress HP.", "status": "confirmed", "sources": ["hp-constellation"] },
+        { "text": "The drafts' \"Fortress HP pivot\" (HP% engines, engine slot 2 at Augmentation 5) is not backed by any source.", "status": "unconfirmed", "sources": [] }
+      ]
+    }
+  ]
+}

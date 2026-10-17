@@ -1,0 +1,8 @@
+{
+  "note": "Only versions with a public note are listed. Add a new entry at the top when a patch lands.",
+  "versions": [
+    { "version": "2.1.15", "date": "2026-10-01", "changes": ["Current App Store version. Patch details not recorded here yet."], "sources": ["appstore"] },
+    { "version": "2.1.10", "date": "2026-09", "changes": ["Machina Engineering added; it unlocks after stage 50-20 and uses Blueprints to craft Precision Parts."], "sources": ["appstore"] },
+    { "version": "2.1.01", "date": null, "changes": ["New hero: Anubis."], "sources": ["appstore"] }
+  ]
+}

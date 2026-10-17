@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mosberg.github.io/Fortress-Saga/schemas/formulas.schema.json",
+  "title": "Formulas",
+  "type": "object",
+  "required": [
+    "damage",
+    "caps",
+    "draft_only"
+  ],
+  "properties": {
+    "damage": {
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/$defs/sourced"
+        }
+      ],
+      "required": [
+        "name",
+        "formula",
+        "notes"
+      ]
+    },
+    "caps": {
+      "$ref": "common.schema.json#/$defs/facts"
+    },
+    "draft_only": {
+      "type": "object",
+      "required": [
+        "status",
+        "note",
+        "items"
+      ],
+      "properties": {
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

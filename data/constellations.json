@@ -1,84 +1,67 @@
 {
-  "system_mechanics": {
-    "unlock_stage": "5-10",
-    "respec_cost": 0,
-    "respec_penalty_pct": 0.0
-  },
+  "mechanics": [
+    { "text": "Constellations unlock at stage 5-10.", "status": "confirmed", "sources": ["gt", "medievalfun"] },
+    { "text": "Resetting is free and does not cost Stardust, so you can switch between a boss setup and a farming setup.", "status": "confirmed", "sources": ["gt"] },
+    { "text": "Each class unlocks once you have invested enough levels in nebulae: Libra 0, Leonis 15, Aquaril 30, Scorpii 120, Capricornii 160. These are levels, not stars.", "status": "confirmed", "sources": ["hp-constellation"] },
+    { "text": "Stardust comes from converting surplus Unique, Epic and Legend heroes on the hero screen.", "status": "confirmed", "sources": ["gt"] },
+    { "text": "Each Fortress Expansion tier gives 30 Stardust.", "status": "confirmed", "sources": ["medievalfun", "gt"] },
+    { "text": "Cannons and cats at level 100 give some Stardust, but gameplay.tips calls it not worth it. The drafts' figure of 5 is unconfirmed.", "status": "unconfirmed", "sources": ["gt"] }
+  ],
   "classes": [
     {
-      "class_name": "Libra",
-      "unlock_cost_stars": 0,
+      "id": "libra", "name": "Libra", "unlock_levels": 0,
       "nebulae": [
-        {
-          "id": "thorn_blade",
-          "name": "Thorn Blade Nebula",
-          "effects": "Increases flat and percentage Hero Attack (+15%/lvl).",
-          "cost_per_level": 4,
-          "max_level": 10
-        },
-        {
-          "id": "lyre",
-          "name": "Lyre Nebula",
-          "effects": "+20% ATK per level for Supporter-class units.",
-          "cost_per_level": 4,
-          "max_level": 10
-        },
-        {
-          "id": "stepping_stone",
-          "name": "Stepping Stone Nebula",
-          "effects": "Up to +80% ATK scaling for Onboard heroes.",
-          "cost_per_level": 4,
-          "max_level": 10
-        }
+        { "id": "thorn_blade", "name": "Thorn Blade", "effect": "Hero ATK", "per_level": null, "max_level": 10, "cost_schedule": [2, 4, 6, 8, 10, 12, 14, 16, 18, 20], "status": "confirmed", "sources": ["hp-constellation"], "note": "Cost schedule confirmed. The drafts' +15% ATK per level is unconfirmed." },
+        { "id": "lyre", "name": "Lyre", "effect": "ATK for Supporters", "per_level": "20% ATK", "max_level": null, "cost_schedule": null, "status": "confirmed", "sources": ["hp-constellation"] },
+        { "id": "stepping_stone", "name": "Stepping Stone", "effect": "ATK for Onboard heroes", "per_level": "20% ATK (80% at 4 levels)", "max_level": null, "cost_schedule": null, "status": "corrected", "sources": ["hp-constellation"], "note": "One draft said 8% per level." }
       ]
     },
     {
-      "class_name": "Leonis",
-      "unlock_cost_stars": 15,
+      "id": "leonis", "name": "Leonis", "unlock_levels": 15,
       "nebulae": [
-        {
-          "id": "gun_mount",
-          "name": "Gun Mount Nebula",
-          "effects": "Escalates base Fortress Cannon damage (+25%/lvl).",
-          "cost_per_level": 6,
-          "max_level": 10
-        },
-        {
-          "id": "sharpshooter",
-          "name": "Sharpshooter Nebula",
-          "effects": "Escalates Fortress Attack Speed directly (+5%/lvl).",
-          "cost_per_level": 6,
-          "max_level": 10
-        },
-        {
-          "id": "platinum",
-          "name": "Platinum Nebula",
-          "effects": "Increases stage Gold drop multipliers (+12%/lvl)."
-        },
-        {
-          "id": "wisdom",
-          "name": "Wisdom Nebula",
-          "effects": "Increases battle EXP acquisition rate (+12%/lvl)."
-        }
+        { "id": "gun_mount", "name": "Gun Mount", "effect": "Fortress cannon damage", "per_level": null, "max_level": null, "cost_schedule": null, "status": "unconfirmed", "sources": [] },
+        { "id": "sharpshooter", "name": "Sharpshooter", "effect": "Fortress Crit DMG", "per_level": null, "max_level": null, "cost_schedule": null, "status": "corrected", "sources": ["hp-constellation"], "note": "The drafts said Fortress attack speed." },
+        { "id": "wisdom", "name": "Wisdom", "effect": "EXP gain (no combat value)", "per_level": null, "max_level": 10, "cost_schedule": null, "status": "confirmed", "sources": ["hp-constellation"] },
+        { "id": "platinum", "name": "Platinum", "effect": "Gold gain (no combat value)", "per_level": null, "max_level": 10, "cost_schedule": null, "status": "confirmed", "sources": ["hp-constellation"] }
       ]
     },
     {
-      "class_name": "Scorpii",
-      "unlock_cost_stars": 120,
+      "id": "aquaril", "name": "Aquaril", "unlock_levels": 30,
       "nebulae": [
-        {
-          "id": "iron_gate",
-          "name": "Iron Gate Nebula",
-          "effects": "Massive multipliers to Fortress Max HP (+75%/lvl, core of late-game HP build).",
-          "cost_per_level": 15,
-          "max_level": 10
-        },
-        {
-          "id": "starfire_ii",
-          "name": "Starfire II Nebula",
-          "effects": "Dedicated ranged artillery damage amplification."
-        }
+        { "id": "steel_knife", "name": "Steel Knife", "effect": "ATK for Epic heroes", "per_level": null, "max_level": null, "cost_schedule": null, "status": "confirmed", "sources": ["hp-constellation"] },
+        { "id": "gold_knife", "name": "Gold Knife", "effect": "ATK for Legend heroes", "per_level": null, "max_level": null, "cost_schedule": null, "status": "confirmed", "sources": ["hp-constellation"] },
+        { "id": "shock_troop", "name": "Shock Troop", "effect": "ATK for deployable heroes", "per_level": null, "max_level": null, "cost_schedule": null, "status": "confirmed", "sources": ["hp-constellation"] },
+        { "id": "armchair", "name": "Armchair", "effect": "HP for all stationed heroes", "per_level": null, "max_level": null, "cost_schedule": null, "status": "confirmed", "sources": ["hp-constellation"] }
+      ]
+    },
+    {
+      "id": "scorpii", "name": "Scorpii", "unlock_levels": 120,
+      "nebulae": [
+        { "id": "iron_gate", "name": "Iron Gate", "effect": "Fortress HP", "per_level": null, "max_level": null, "cost_schedule": null, "status": "confirmed", "sources": ["hp-constellation"], "note": "Scorpii costs start at 10 Stardust. The drafts' +75% per level and later costs are unconfirmed." },
+        { "id": "starfire_ii", "name": "Starfire II", "effect": "ATK for ranged heroes", "per_level": null, "max_level": null, "cost_schedule": null, "status": "corrected", "sources": ["hp-constellation"], "note": "The drafts said artillery damage." }
+      ]
+    },
+    {
+      "id": "capricornii", "name": "Capricornii", "unlock_levels": 160,
+      "nebulae": [
+        { "id": "vanguard_fortification", "name": "Vanguard Fortification", "effect": "Frontline mitigation (drafts)", "per_level": null, "max_level": null, "cost_schedule": null, "status": "unconfirmed", "sources": [] }
       ]
     }
-  ]
+  ],
+  "other_nebulae": {
+    "note": "The constellation guide names these nebulae too, without saying which class they sit in.",
+    "sources": ["hp-constellation"],
+    "items": [
+      { "name": "Hunter", "effect": "Boss damage" },
+      { "name": "Bronze Armor", "effect": "HP" },
+      { "name": "Bonfire", "effect": "Recovery" },
+      { "name": "Bronze Shield", "effect": "DEF for Unique heroes" },
+      { "name": "Light Cross", "effect": "ATK for healers" },
+      { "name": "Platinum Knife", "effect": null },
+      { "name": "Platinum Armor", "effect": null },
+      { "name": "Thorn Axe", "effect": null },
+      { "name": "Wooden Knife", "effect": null },
+      { "name": "Bronze Knife", "effect": null }
+    ]
+  }
 }

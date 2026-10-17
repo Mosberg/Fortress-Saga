@@ -1,0 +1,106 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mosberg.github.io/Fortress-Saga/schemas/gear.schema.json",
+  "title": "Gear and runes",
+  "type": "object",
+  "required": [
+    "facts",
+    "rune_lines",
+    "legend_red_rolls",
+    "stat_priority",
+    "draft_runes"
+  ],
+  "properties": {
+    "facts": {
+      "$ref": "common.schema.json#/$defs/facts"
+    },
+    "rune_lines": {
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/$defs/sourced"
+        }
+      ],
+      "required": [
+        "tiers"
+      ],
+      "properties": {
+        "tiers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "tier",
+              "white",
+              "red"
+            ],
+            "properties": {
+              "tier": {
+                "$ref": "common.schema.json#/$defs/rarity"
+              },
+              "white": {
+                "type": "integer"
+              },
+              "red": {
+                "type": "integer"
+              }
+            }
+          }
+        }
+      }
+    },
+    "legend_red_rolls": {
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/$defs/sourced"
+        }
+      ],
+      "required": [
+        "rolls"
+      ],
+      "properties": {
+        "rolls": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "stat",
+              "min",
+              "max"
+            ],
+            "properties": {
+              "stat": {
+                "type": "string"
+              },
+              "min": {
+                "type": "number"
+              },
+              "max": {
+                "type": "number"
+              }
+            }
+          }
+        }
+      }
+    },
+    "stat_priority": {
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/$defs/sourced"
+        }
+      ],
+      "required": [
+        "bossing",
+        "farming",
+        "potentials"
+      ]
+    },
+    "draft_runes": {
+      "type": "object",
+      "required": [
+        "status",
+        "note",
+        "items"
+      ]
+    }
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mosberg.github.io/Fortress-Saga/schemas/fortress.schema.json",
+  "title": "Fortress",
+  "type": "object",
+  "required": [
+    "cannons",
+    "kits",
+    "facilities",
+    "facility_notes",
+    "engines",
+    "machina"
+  ],
+  "properties": {
+    "cannons": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "role",
+          "status",
+          "sources"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "role": {
+            "type": "string"
+          },
+          "status": {
+            "$ref": "common.schema.json#/$defs/status"
+          },
+          "sources": {
+            "$ref": "common.schema.json#/$defs/sources"
+          },
+          "note": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "kits": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "role",
+          "status",
+          "sources"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "role": {
+            "type": "string"
+          },
+          "status": {
+            "$ref": "common.schema.json#/$defs/status"
+          },
+          "sources": {
+            "$ref": "common.schema.json#/$defs/sources"
+          },
+          "note": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "facilities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "role",
+          "status",
+          "sources"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "role": {
+            "type": "string"
+          },
+          "status": {
+            "$ref": "common.schema.json#/$defs/status"
+          },
+          "sources": {
+            "$ref": "common.schema.json#/$defs/sources"
+          },
+          "note": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "facility_notes": {
+      "$ref": "common.schema.json#/$defs/facts"
+    },
+    "engines": {
+      "$ref": "common.schema.json#/$defs/facts"
+    },
+    "machina": {
+      "$ref": "common.schema.json#/$defs/facts"
+    }
+  }
+}
